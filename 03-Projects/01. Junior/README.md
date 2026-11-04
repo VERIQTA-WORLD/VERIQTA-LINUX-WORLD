@@ -183,7 +183,7 @@ Before starting, learners should be able to:
 - run a command with `sudo`;
 - read basic command output.
 
-Learners who need these foundations should begin with [00 Start Here](../../00-Start-Here/) and [01 Beginner to Advanced](../../01-Beginner-to-Advanced/).
+Learners who need these foundations should begin with [00 Start Here](../../00-start-here/) and [01 Beginner to Advanced](../../01-Beginner-to-Advanced/).
 
 ## How to Complete a Project
 

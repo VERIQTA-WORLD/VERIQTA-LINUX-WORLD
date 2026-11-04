@@ -125,6 +125,6 @@ If you must abort before it finishes, identify it with `jobs -l` and `ps -p "$lo
 
 - [vmstat](https://man7.org/linux/man-pages/man8/vmstat.8.html) and [process status](https://man7.org/linux/man-pages/man5/proc_pid_status.5.html).
 - [Kernel pressure stall information](https://docs.kernel.org/accounting/psi.html) and [cgroup v2](https://docs.kernel.org/admin-guide/cgroup-v2.html).
-- [Performance investigation reference](../04-commands-and-cheat-sheets/performance/performance-investigation-cheat-sheet.md).
+- [Performance investigation reference](../04-command-reference/performance/performance-investigation-cheat-sheet.md).
 
 [Collection home](README.md) · [Recovery verification](verify-recovery-after-a-fix.md)

@@ -12,7 +12,7 @@ import sys
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
-GUIDES = ROOT / '06-production-administration'
+GUIDES = ROOT / '06-system-administration'
 CASES = {
     'linux-server-readiness-checklist.md': ('ready_lab', 3, ['Decision: BLOCKED', 'Console test: pending']),
     'user-access-and-sudo-management.md': ('access_lab', 3, ['draft not installed', 'Unverified: actual command path']),

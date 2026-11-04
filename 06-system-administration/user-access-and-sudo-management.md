@@ -35,7 +35,7 @@ Do not use `NOPASSWD: ALL` to fix an automation failure. Where noninteractive ac
 
 ### 3. Apply only an authorized plan
 
-Local account/group operations change real access and require a target-specific plan. Use [account commands](../04-commands-and-cheat-sheets/users-and-permissions/user-and-group-commands.md) for syntax after verifying identity ownership. New group membership generally affects new login sessions; existing processes keep their groups.
+Local account/group operations change real access and require a target-specific plan. Use [account commands](../04-command-reference/users-and-permissions/user-and-group-commands.md) for syntax after verifying identity ownership. New group membership generally affects new login sessions; existing processes keep their groups.
 
 Use visudo for sudoers edits and validate the **whole policy**, including includes. Match ownership/mode requirements to the installed sudo version and distribution. Test a second session before closing your recovery session. For SSH, follow the [SSH recovery guide](../05-troubleshooting-and-recovery/ssh-login-is-failing.md) for host identity and configuration checks.
 
@@ -96,6 +96,6 @@ No account, group, key or sudo rule was changed by the draft exercise.
 ## References
 
 - [sudoers policy](https://www.sudo.ws/docs/man/sudoers.man/) and [visudo validation](https://www.sudo.ws/docs/man/visudo.man/).
-- [getent](https://man7.org/linux/man-pages/man1/getent.1.html) and [sudo reference](../04-commands-and-cheat-sheets/users-and-permissions/sudo-reference.md).
+- [getent](https://man7.org/linux/man-pages/man1/getent.1.html) and [sudo reference](../04-command-reference/users-and-permissions/sudo-reference.md).
 
 [Collection home](README.md)

@@ -75,7 +75,7 @@ Expect Debian-related, the supplied release/variant and not-observed tool/policy
 
 Record identity separately from installed tool versions, active managers, repository origins, profile enforcement and support coverage. A successful apt query does not establish normal boot/service behavior inside a container. A valid Netplan configuration does not prove the remote client path works after activation.
 
-Actual changes belong in the [configuration/rollback](../06-production-administration/configuration-changes-and-rollback.md) and [maintenance](../06-production-administration/patching-and-maintenance.md) workflows. No network, repository, security or service change is part of this lab.
+Actual changes belong in the [configuration/rollback](../06-system-administration/configuration-changes-and-rollback.md) and [maintenance](../06-system-administration/patching-and-maintenance.md) workflows. No network, repository, security or service change is part of this lab.
 
 ## Cleanup
 
@@ -88,6 +88,6 @@ rmdir -- "$ubuntu_lab"
 
 - [Ubuntu Server documentation](https://documentation.ubuntu.com/server/) and [release coverage](https://ubuntu.com/about/release-cycle).
 - [Network configuration](https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/) and [AppArmor](https://ubuntu.com/server/docs/how-to/security/apparmor/).
-- [APT reference](../04-commands-and-cheat-sheets/packages/apt-reference.md).
+- [APT reference](../04-command-reference/packages/apt-reference.md).
 
 [Collection home](README.md) · [Debian comparison](debian-administration-notes.md)

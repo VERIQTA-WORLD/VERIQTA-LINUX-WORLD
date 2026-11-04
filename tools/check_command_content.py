@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check folders 4 through 7 content, local links and Bash syntax without executing examples."""
+"""Check authored guides, structural navigation and Bash syntax without executing examples."""
 from pathlib import Path
 import os
 import ast
@@ -9,9 +9,9 @@ import sys
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-COLLECTION = ROOT / '04-commands-and-cheat-sheets'
+COLLECTION = ROOT / '04-command-reference'
 RECOVERY = ROOT / '05-troubleshooting-and-recovery'
-ADMINISTRATION = ROOT / '06-production-administration'
+ADMINISTRATION = ROOT / '06-system-administration'
 DISTRIBUTIONS = ROOT / '07-linux-distributions'
 DISTRIBUTION_REQUIRED = (
     '## Scope and environment',
@@ -64,8 +64,10 @@ def exact_exists(path):
 
 def check():
     errors = []
-    files = sorted(COLLECTION.rglob('*.md')) + sorted(RECOVERY.glob('*.md')) + sorted(ADMINISTRATION.glob('*.md')) + sorted(DISTRIBUTIONS.glob('*.md')) + [ROOT / 'README.md', ROOT / 'docs/folders-04-08-assessment.md', ROOT / 'CONTRIBUTING.md', ROOT / 'NOTICE.md', ROOT / 'LICENSE.md']
-    references = [p for p in COLLECTION.glob('*/*.md') if p.name != 'README.md']
+    navigation = sorted((ROOT / '00-start-here').glob('*.md')) + [ROOT / '08-resources-and-reference/README.md', ROOT / 'docs/repository-structure.md', ROOT / 'docs/structure-migration-validation.md']
+    navigation += [p / 'README.md' for p in ROOT.iterdir() if p.is_dir() and p.name[:2] in {'09', '10', '11', '12', '13', '14', '15'}]
+    files = navigation + sorted(COLLECTION.rglob('*.md')) + sorted(RECOVERY.glob('*.md')) + sorted(ADMINISTRATION.glob('*.md')) + sorted(DISTRIBUTIONS.glob('*.md')) + [ROOT / 'README.md', ROOT / 'docs/folders-04-08-assessment.md', ROOT / 'CONTRIBUTING.md', ROOT / 'NOTICE.md', ROOT / 'LICENSE.md']
+    references = [p for p in COLLECTION.glob('*/*.md') if p.name != 'README.md' and p.parent.name != 'cheat-sheets']
     recovery_guides = [p for p in RECOVERY.glob('*.md') if p.name not in {'README.md', 'VALIDATION.md'}]
     contracts = {p: REQUIRED for p in references}
     contracts.update({p: RECOVERY_REQUIRED for p in recovery_guides})

@@ -82,7 +82,7 @@ Expect both hints to be Enterprise RPM-related while IDs remain rhel and rocky. 
 
 A real comparison should record exact release/architecture, installed DNF implementation, package/repository versions, network owner, security enforcement, required service identity and product support evidence/date. Treat a missing tool/query or permission denial as an observation to explain, not permission to disable controls.
 
-The fixture proves identity handling only. Installation, real repository access, major upgrades, certification and support coverage remain untested. Use [maintenance planning](../06-production-administration/patching-and-maintenance.md) before actual changes.
+The fixture proves identity handling only. Installation, real repository access, major upgrades, certification and support coverage remain untested. Use [maintenance planning](../06-system-administration/patching-and-maintenance.md) before actual changes.
 
 ## Cleanup
 

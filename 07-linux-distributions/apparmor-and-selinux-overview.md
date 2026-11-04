@@ -108,6 +108,6 @@ rmdir -- "$policy_lab"
 - [Ubuntu AppArmor operations](https://ubuntu.com/server/docs/how-to/security/apparmor/).
 - [RHEL 10 SELinux concepts and operations](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html-single/using_selinux/index).
 - [Linux Security Modules](https://docs.kernel.org/admin-guide/LSM/index.html).
-- [Permission command reference](../04-commands-and-cheat-sheets/users-and-permissions/permissions-and-ownership.md) and [security inspection commands](../04-commands-and-cheat-sheets/security/access-audit-commands.md).
+- [Permission command reference](../04-command-reference/users-and-permissions/permissions-and-ownership.md) and [security inspection commands](../04-command-reference/security/access-audit-commands.md).
 
 [Collection home](README.md)

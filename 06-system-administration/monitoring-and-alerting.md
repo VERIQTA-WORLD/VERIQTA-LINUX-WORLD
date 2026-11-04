@@ -98,6 +98,6 @@ No agent, monitoring rule, silence or external notification changed.
 ## References
 
 - [Prometheus alerting-rule behavior](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/) and [rule testing](https://prometheus.io/docs/prometheus/latest/configuration/unit_testing_rules/): one implementation to study, not a required stack.
-- [curl](https://curl.se/docs/manpage.html) and [performance interpretation](../04-commands-and-cheat-sheets/performance/performance-investigation-cheat-sheet.md).
+- [curl](https://curl.se/docs/manpage.html) and [performance interpretation](../04-command-reference/performance/performance-investigation-cheat-sheet.md).
 
 [Collection home](README.md)

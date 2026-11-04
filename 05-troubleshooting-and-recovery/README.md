@@ -39,10 +39,16 @@ Record the affected user task, incident time window, scope, recent changes and c
 
 Do not erase logs, flush firewall policy, delete lock files, broadly change permissions, fill a real filesystem or force a filesystem repair just to see whether the symptom disappears. The guides explain targeted alternatives. Escalate when evidence suggests failing hardware, corruption, unknown data ownership or a risk beyond your recovery access.
 
+## Expand through tested failure scenarios
+
+Current execution evidence covers the reasoning exercise, isolated offline SSH configuration, a stopped loopback HTTP server and successful HTTP responses with wrong content. These teach distinct failure boundaries; they do not establish every Linux or network failure cause. See the validation record for their actual authoring environment.
+
+The next expansion should reproduce the already documented systemd, byte/inode exhaustion, read-only mount, Linux resource-pressure, DNS and boot-observation exercises on named disposable Linux targets. Add further scenarios only with an isolated setup, a controlled failure, competing hypotheses, recovery acceptance and verified cleanup. Do not mark a scenario tested just because its command syntax parses.
+
 ## Track the quality of your work
 
 For each exercise, write down the initial observation, at least two hypotheses, the discriminating check, the supported conclusion, the recovery action and the verification evidence. Include what you have **not** ruled out. A learning portfolio should distinguish a controlled simulation from a production incident.
 
 All ten guide pages are written in this installment. See the [validation record](VALIDATION.md) for executed portable checks and the Linux-only scenarios still awaiting reproduction. Written coverage is not a claim that every distribution and repair path has been tested.
 
-[Command explanations](../04-commands-and-cheat-sheets/README.md) · [Quick command tables](../09-cheat-sheets) · [Content standard](../CONTENT-STANDARD.md) · [LINUX-WORLD](../README.md)
+[Command explanations](../04-command-reference/README.md) · [Quick command tables](../04-command-reference/cheat-sheets) · [Content standard](../CONTENT-STANDARD.md) · [LINUX-WORLD](../README.md)

@@ -6,7 +6,7 @@ import subprocess
 import sys
 
 root = Path(__file__).resolve().parents[1]
-folder = root / '09-cheat-sheets'
+folder = root / '04-command-reference/cheat-sheets'
 files = sorted(folder.glob('*.md'))
 errors = []
 commands = 0

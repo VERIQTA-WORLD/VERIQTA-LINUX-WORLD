@@ -65,7 +65,7 @@ As an extension, compare the same capability on a second family, recording actua
 
 A correct translation records task, manager/implementation, scope, operands, side effects, expected statuses and actual result. A table entry is not proof that a tool or repository is installed or supported on the target.
 
-The portable exercise verifies a written task mapping only. Package availability, repository queries and transaction simulations remain pending Linux reproduction. Use [patching and maintenance](../06-production-administration/patching-and-maintenance.md) for an accepted change.
+The portable exercise verifies a written task mapping only. Package availability, repository queries and transaction simulations remain pending Linux reproduction. Use [patching and maintenance](../06-system-administration/patching-and-maintenance.md) for an accepted change.
 
 ## Cleanup
 
@@ -80,4 +80,4 @@ rmdir -- "$packages_lab"
 - [Zypper manual](https://manpages.opensuse.org/Tumbleweed/zypper/zypper.8.en.html), [pacman manual](https://man.archlinux.org/man/pacman.8.en) and [apk manuals](https://docs.alpinelinux.org/user-handbook/0.1a/Working/apk.html).
 - [NixOS manual](https://nixos.org/manual/nixos/stable/).
 
-[Collection home](README.md) · [Package command references](../04-commands-and-cheat-sheets/packages/README.md)
+[Collection home](README.md) · [Package command references](../04-command-reference/packages/README.md)

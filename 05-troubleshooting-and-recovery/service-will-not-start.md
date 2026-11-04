@@ -135,6 +135,6 @@ The final listing should contain no installed lab unit. The runtime user-unit di
 ## References
 
 - [systemctl](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html), [unit definitions](https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html) and [execution status](https://www.freedesktop.org/software/systemd/man/latest/systemd.exec.html).
-- [Service command reference](../04-commands-and-cheat-sheets/processes-and-services/systemctl-reference.md).
+- [Service command reference](../04-command-reference/processes-and-services/systemctl-reference.md).
 
 [Collection home](README.md) · [Recovery verification](verify-recovery-after-a-fix.md)

@@ -6,7 +6,7 @@ confirmation replies only to those isolated example scripts. No sudo is used.
 """
 from pathlib import Path
 import re, subprocess, tempfile, os
-base=Path(__file__).resolve().parents[1]/'04-commands-and-cheat-sheets'
+base=Path(__file__).resolve().parents[1]/'04-command-reference'
 selected={
  'files-and-directories/navigation-commands.md':['/notes/week 1'],
  'files-and-directories/file-management-commands.md':['renamed.txt'],

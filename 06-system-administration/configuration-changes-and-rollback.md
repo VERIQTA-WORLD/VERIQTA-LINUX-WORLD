@@ -45,7 +45,7 @@ printf '{"port":8000,"message":"before"}\n' > "$config_lab/active.json"
 chmod 600 "$config_lab/active.json"
 cp -p "$config_lab/active.json" "$config_lab/previous.json"
 printf '{"port":"wrong-type","message":"after"}\n' > "$config_lab/candidate.json"
-python3 06-production-administration/labs/check_demo_config.py "$config_lab/candidate.json"
+python3 06-system-administration/labs/check_demo_config.py "$config_lab/candidate.json"
 printf 'invalid candidate status: %s\n' "$?"
 cmp -- "$config_lab/previous.json" "$config_lab/active.json"
 printf 'active still matches previous: %s\n' "$?"
@@ -57,7 +57,7 @@ Expect validator status 2 and comparison status 0. The candidate is valid JSON s
 
 ```bash
 printf '{"port":9000,"message":"after"}\n' > "$config_lab/candidate.json"
-python3 06-production-administration/labs/check_demo_config.py "$config_lab/candidate.json"
+python3 06-system-administration/labs/check_demo_config.py "$config_lab/candidate.json"
 ```
 
 Stop unless validation succeeds. Stage a regular file in the same directory, give it the intended mode and replace only the sample active file:
@@ -66,7 +66,7 @@ Stop unless validation succeeds. Stage a regular file in the same directory, giv
 cp "$config_lab/candidate.json" "$config_lab/next.json"
 chmod 600 "$config_lab/next.json"
 mv "$config_lab/next.json" "$config_lab/active.json"
-python3 06-production-administration/labs/check_demo_config.py "$config_lab/active.json"
+python3 06-system-administration/labs/check_demo_config.py "$config_lab/active.json"
 cat "$config_lab/active.json"
 ```
 
@@ -77,7 +77,7 @@ Expect the accepted candidate values, port 9000 and message after. No applicatio
 Assume an application-level test rejected the changed behavior. Validate the previous sample, stage its metadata-preserving copy and replace the active file:
 
 ```bash
-python3 06-production-administration/labs/check_demo_config.py "$config_lab/previous.json"
+python3 06-system-administration/labs/check_demo_config.py "$config_lab/previous.json"
 cp -p "$config_lab/previous.json" "$config_lab/rollback.json"
 mv "$config_lab/rollback.json" "$config_lab/active.json"
 cmp -- "$config_lab/previous.json" "$config_lab/active.json"

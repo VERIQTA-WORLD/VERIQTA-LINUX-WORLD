@@ -72,7 +72,7 @@ Expect both family hints to be Debian-related while IDs/releases remain distinct
 
 For a real host, retain exact identity, architecture, source origins, installed/candidate package version, active network owner, resolver, unit/log arrangement and security state. Distinguish absence from an unprivileged or unavailable query.
 
-The fixture confirms only reader behavior. It does not establish package availability, support entitlement, actual interface ownership or a successful Debian upgrade. Use [production maintenance](../06-production-administration/patching-and-maintenance.md) for a planned change.
+The fixture confirms only reader behavior. It does not establish package availability, support entitlement, actual interface ownership or a successful Debian upgrade. Use [production maintenance](../06-system-administration/patching-and-maintenance.md) for a planned change.
 
 ## Cleanup
 

@@ -126,6 +126,6 @@ Confirm the paths in each prompt. Successful rmdir establishes that the temporar
 
 - [Linux proc filesystem](https://man7.org/linux/man-pages/man5/proc.5.html): understand what host snapshots expose.
 - [systemd journal queries](https://www.freedesktop.org/software/systemd/man/latest/journalctl.html): select records by boot, unit and time.
-- [Command index](../04-commands-and-cheat-sheets/command-index.md): tool syntax and effects.
+- [Command index](../04-command-reference/command-index.md): tool syntax and effects.
 
 [Collection home](README.md) · [Verify recovery](verify-recovery-after-a-fix.md)

@@ -1,13 +1,13 @@
-# Commands and cheat sheets
+# Command reference
 
-![Commands and cheat sheets](../assets/images/04-commands-and-cheat-sheets-cover.svg)
+![Command reference](../assets/images/04-commands-and-cheat-sheets-cover.svg)
 
 Find a command, understand its effects, practise it in isolation, and verify the result. This collection covers everyday Linux command use across ten administration domains. It is a curated reference rather than an exhaustive catalog of every Linux command or option.
 
 ## Choose your entry point
 
 - **I know my task:** open the [command and task index](command-index.md).
-- **I want a compact reminder:** open a category below for its at-a-glance table.
+- **I want a compact reminder:** use the [70 task-based cheat sheets](cheat-sheet-index.md) or a category’s at-a-glance table.
 - **I am learning:** follow the category order, then complete each linked walkthrough.
 - **I have an incident:** use the symptom guides in [folder 5](../05-troubleshooting-and-recovery/README.md). This collection explains tools; it does not establish a diagnosis.
 
@@ -26,7 +26,7 @@ Find a command, understand its effects, practise it in isolation, and verify the
 
 ## Before you run a command
 
-Use an unprivileged Bash shell in a disposable Linux VM. Keep snapshots and console access for administration practice. A VM booted with systemd is needed for service examples; a minimal container does not reproduce full host administration. See the existing [environment setup](../00-Start-Here/set-up-your-linux-environment.md) and [lab safety](../00-Start-Here/linux-lab-safety.md) material for context.
+Use an unprivileged Bash shell in a disposable Linux VM. Keep snapshots and console access for administration practice. A VM booted with systemd is needed for service examples; a minimal container does not reproduce full host administration. See the existing [environment setup](../00-start-here/set-up-your-linux-environment.md) and [lab safety](../00-start-here/linux-lab-safety.md) material for context.
 
 The intended baseline is GNU/Linux with Bash, GNU Coreutils and the named utility on each page. Package references distinguish Debian/Ubuntu APT from Fedora/RHEL-family DNF. This is a compatibility target, **not a claim that all examples have been tested on those distributions**. See the [validation record](VALIDATION.md).
 

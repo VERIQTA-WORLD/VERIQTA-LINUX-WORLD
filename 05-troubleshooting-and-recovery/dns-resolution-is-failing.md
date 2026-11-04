@@ -112,6 +112,6 @@ No system resolver setting or DNS record changed. Record whether your external q
 - [BIND dig documentation](https://bind9.readthedocs.io/en/latest/manpages.html#dig-dns-lookup-utility).
 - [getent](https://man7.org/linux/man-pages/man1/getent.1.html) and [resolver configuration](https://man7.org/linux/man-pages/man5/resolv.conf.5.html).
 - [RFC 2606 reserved names](https://www.rfc-editor.org/rfc/rfc2606.html).
-- [DNS command reference](../04-commands-and-cheat-sheets/networking/dns-troubleshooting-commands.md).
+- [DNS command reference](../04-command-reference/networking/dns-troubleshooting-commands.md).
 
 [Collection home](README.md) · [Troubleshooting method](linux-troubleshooting-method.md)

@@ -106,6 +106,6 @@ Production backup expiry and deletion are separate authorized lifecycle tasks; t
 
 - [GNU tar manual](https://www.gnu.org/software/tar/manual/tar.html).
 - [rsync preservation and synchronization semantics](https://download.samba.org/pub/rsync/rsync.1).
-- [Restore verification reference](../04-commands-and-cheat-sheets/backup-and-recovery/recovery-command-reference.md) and [service recovery acceptance](../05-troubleshooting-and-recovery/verify-recovery-after-a-fix.md).
+- [Restore verification reference](../04-command-reference/backup-and-recovery/recovery-command-reference.md) and [service recovery acceptance](../05-troubleshooting-and-recovery/verify-recovery-after-a-fix.md).
 
 [Collection home](README.md)
