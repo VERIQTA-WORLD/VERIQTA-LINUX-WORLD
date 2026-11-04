@@ -6,7 +6,7 @@
 
 **Learn Linux, practise operational skills and build portfolio projects from beginner foundations to advanced administration.**
 
-[Start here](00-start-here) · [Learn Linux](01-beginner-to-advanced) · [Practise labs](02-labs) · [Build projects](03-projects) · [Find commands](04-commands-and-cheat-sheets)
+[Start here](00-Start-Here) · [Learn Linux](01-Beginner-to-Advanced) · [Practise labs](02-Labs) · [Build projects](03-Projects) · [Find commands](04-commands-and-cheat-sheets)
 
 </div>
 
@@ -16,10 +16,10 @@ LINUX-WORLD connects clear explanations with hands-on practice, complete project
 
 | Collection | What you can explore |
 | --- | --- |
-| [Start here](00-start-here) | Set up Linux, choose a learning path and practise safely. |
-| [Beginner to advanced](01-beginner-to-advanced) | Build Linux knowledge through a progressive lesson sequence. |
-| [Linux labs](02-labs) | Practise individual skills through guided exercises and controlled failures. |
-| [Linux portfolio projects](03-projects) | Build complete Linux systems and document your engineering decisions. |
+| [Start here](00-Start-Here) | Set up Linux, choose a learning path and practise safely. |
+| [Beginner to advanced](01-Beginner-to-Advanced) | Build Linux knowledge through a progressive lesson sequence. |
+| [Linux labs](02-Labs) | Practise individual skills through guided exercises and controlled failures. |
+| [Linux portfolio projects](03-Projects) | Build complete Linux systems and document your engineering decisions. |
 | [Commands and cheat sheets](04-commands-and-cheat-sheets) | Find commands, examples and quick operational references. |
 | [Troubleshooting and recovery](05-troubleshooting-and-recovery) | Investigate symptoms, test hypotheses and verify recovery. |
 | [Production administration](06-production-administration) | Maintain server access, services, updates, backups and operational health. |
@@ -39,21 +39,21 @@ Start with navigation, files and permissions. Develop confidence with processes,
 | Automation | Shell scripts, scheduled work, archives and backups |
 | Advanced operations | Performance, security, recovery and server ownership |
 
-[Explore the lesson sequence](01-beginner-to-advanced)
+[Explore the lesson sequence](01-Beginner-to-Advanced)
 
 ## Practise individual skills
 
 Labs provide a focused setup, task, verification, troubleshooting and cleanup sequence. Practise in an isolated environment, inspect command results and explain why each action works.
 
-[Browse Linux labs](02-labs)
+[Browse Linux labs](02-Labs)
 
 ## Build portfolio projects
 
 Explore junior, mid-level and senior projects. Each follows thirteen steps covering the system goal, environment, implementation, automation, security, deployment, monitoring, failure recovery, independent improvement, portfolio documentation and cleanup.
 
-- [Junior projects](03-projects/01-junior)
-- [Mid-level projects](03-projects/02-mid-level)
-- [Senior projects](03-projects/03-senior)
+- [Junior projects](03-Projects/01.%20Junior)
+- [Mid-level projects](03-Projects/02.%20Mid-Level)
+- [Senior projects](03-Projects/03.%20Senior)
 
 Document the architecture, commands, test results and a failure investigation. Describe guided work accurately and explain the independent changes you made. Project completion does not establish professional production experience or guarantee employment.
 
@@ -96,3 +96,7 @@ VERIQTA WORLD shares engineering resources that connect learning with practical 
 [Explore VERIQTA WORLD](https://github.com/VERIQTA-WORLD)
 
 Names and trademarks belong to their respective owners. This independent educational resource does not imply endorsement or affiliation.
+
+## Use and permissions
+
+This is public educational material under the custom [VERIQTA Personal Study License](LICENSE.md). Personal study and the permitted exercise execution are allowed; modification and redistribution require written permission, subject to the exceptions in the license. This is a restrictive license, not an open-source license. See [NOTICE](NOTICE.md) for third-party rights.
