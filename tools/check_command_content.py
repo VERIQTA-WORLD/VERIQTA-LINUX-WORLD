@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Check folder 4 content, local links and Bash syntax without executing examples."""
+"""Check folders 4 and 5 content, local links and Bash syntax without executing examples."""
 from pathlib import Path
 import os
+import ast
 import re
 import subprocess
 import sys
@@ -9,6 +10,15 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 COLLECTION = ROOT / '04-commands-and-cheat-sheets'
+RECOVERY = ROOT / '05-troubleshooting-and-recovery'
+RECOVERY_REQUIRED = (
+    '## Environment and permissions',
+    '## Evidence and interpretation',
+    '## Follow-along lab',
+    '## Recovery and verification',
+    '## Cleanup',
+    '## References',
+)
 REQUIRED = (
     '## Environment and permissions',
     '## Quick reference',
@@ -35,8 +45,11 @@ def exact_exists(path):
 
 def check():
     errors = []
-    files = sorted(COLLECTION.rglob('*.md')) + [ROOT / 'README.md', ROOT / 'docs/folders-04-08-assessment.md', ROOT / 'CONTRIBUTING.md', ROOT / 'NOTICE.md', ROOT / 'LICENSE.md']
+    files = sorted(COLLECTION.rglob('*.md')) + sorted(RECOVERY.glob('*.md')) + [ROOT / 'README.md', ROOT / 'docs/folders-04-08-assessment.md', ROOT / 'CONTRIBUTING.md', ROOT / 'NOTICE.md', ROOT / 'LICENSE.md']
     references = [p for p in COLLECTION.glob('*/*.md') if p.name != 'README.md']
+    recovery_guides = [p for p in RECOVERY.glob('*.md') if p.name not in {'README.md', 'VALIDATION.md'}]
+    contracts = {p: REQUIRED for p in references}
+    contracts.update({p: RECOVERY_REQUIRED for p in recovery_guides})
     blocks = 0
     links = 0
     for path in files:
@@ -44,8 +57,8 @@ def check():
         label = str(path.relative_to(ROOT))
         if not text.strip():
             errors.append(f'{label}: empty page')
-        if path in references:
-            for heading in REQUIRED:
+        if path in contracts:
+            for heading in contracts[path]:
                 if heading not in text:
                     errors.append(f'{label}: missing {heading}')
             if not re.search(r'\[[^\]]+\]\(https://', text):
@@ -55,6 +68,11 @@ def check():
             errors.append(f'{label}: unbalanced code fences')
         for code in re.findall(r'^```bash\n(.*?)^```', text, flags=re.M | re.S):
             blocks += 1
+            for embedded in re.findall(r"<<'PY'\n(.*?)^PY$", code, flags=re.M | re.S):
+                try:
+                    ast.parse(embedded)
+                except SyntaxError as error:
+                    errors.append(f'{label}: embedded Python syntax: {error}')
             result = subprocess.run(['bash', '-n'], input=code, text=True, capture_output=True)
             if result.returncode:
                 errors.append(f'{label}: Bash syntax: {result.stderr.strip()}')
@@ -81,7 +99,7 @@ def check():
     if errors:
         print('\n'.join(errors))
         return 1
-    print(f'PASS: {len(files)} pages, {len(references)} reference contracts, {blocks} Bash blocks, {links} local links.')
+    print(f'PASS: {len(files)} pages, {len(contracts)} content contracts, {blocks} Bash blocks, {links} local links.')
     print('Syntax and structure only: no Linux command execution or external URL availability is claimed.')
     return 0
 

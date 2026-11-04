@@ -9,7 +9,7 @@ Find a command, understand its effects, practise it in isolation, and verify the
 - **I know my task:** open the [command and task index](command-index.md).
 - **I want a compact reminder:** open a category below for its at-a-glance table.
 - **I am learning:** follow the category order, then complete each linked walkthrough.
-- **I have an incident:** use the symptom guides in [folder 5](../05-troubleshooting-and-recovery/README.md) once those guides are populated. This collection explains tools; it does not establish a diagnosis.
+- **I have an incident:** use the symptom guides in [folder 5](../05-troubleshooting-and-recovery/README.md). This collection explains tools; it does not establish a diagnosis.
 
 | Category | What you will do | References |
 | --- | --- | --- |
@@ -57,7 +57,7 @@ Storage changes, firewall activation, production service restarts and account de
 
 ## How this fits the repository
 
-Folder 4 answers “what does this command do, and how can I practise it?” Folder 5 will answer “what evidence distinguishes these possible failures?” Folder 6 will define repeatable administration with prechecks and rollback. Folder 7 will explain distribution differences. Folder 8 will hold broader documentation and terminology.
+Folder 4 answers “what does this command do, and how can I practise it?” Folder 5 answers “what evidence distinguishes these possible failures?” Folder 6 will define repeatable administration with prechecks and rollback. Folder 7 will explain distribution differences. Folder 8 will hold broader documentation and terminology.
 
 Read the [assessment and architecture](../docs/folders-04-08-assessment.md) for the measured starting state, scope boundaries and the quality gates for future installments.
 
