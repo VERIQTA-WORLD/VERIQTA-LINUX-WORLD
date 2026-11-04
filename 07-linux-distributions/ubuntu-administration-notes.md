@@ -31,7 +31,7 @@ Netplan describes network configuration and renders to a backend such as systemd
 Useful selected checks, only where the tool is installed:
 
 ```bash
-netplan get
+sudo netplan get
 networkctl status
 nmcli device status
 ls -l /etc/resolv.conf
@@ -39,6 +39,8 @@ resolvectl status
 ```
 
 A missing/inactive manager is not automatically a failure if another component owns the connection. Cloud-init or image automation can generate networking. Editing generated files or changing renderers over SSH without console recovery can disconnect access. Inspect sources/owners and the real interface before planning a change.
+
+Netplan inspection can require authorized sudo because cloud-generated YAML is deliberately private. On the tested Ubuntu cloud image, unprivileged `netplan get` returned permission denied for the root-owned configuration; `sudo netplan get` read it successfully. Preserve those permissions rather than making network configuration broadly readable. Its output may contain sensitive settings, so keep the evidence private and review redactions before sharing.
 
 ### Services, access and security
 

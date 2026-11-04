@@ -6,7 +6,7 @@ Logs support diagnosis, security review and accountability. Manage them as data 
 
 Linux systems may use journald, application files, syslog forwarding or several together. Discover the actual writer and owner. System log queries and rotation policy changes can require authorization. Logs, command arguments and captures can contain credentials or personal data; keep evidence private and share only reviewed redactions.
 
-The lab needs logrotate but no root. It rotates one private temporary log using an isolated configuration and state file. It never reads `/etc/logrotate.conf`, rotates a host log or signals a real application. Runtime validation of this lab remains pending on Linux.
+The lab needs logrotate but no root. It rotates one private temporary log using an isolated configuration and state file. It never reads `/etc/logrotate.conf`, rotates a host log or signals a real application. The isolated exercise was reproduced with logrotate 3.21/3.22 on Ubuntu 24.04, Debian 13 and Fedora 44; see the [execution record](VALIDATION.md).
 
 ## Before you begin
 

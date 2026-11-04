@@ -6,7 +6,7 @@ Fedora offers rapidly evolving Linux technology through several products and dep
 
 The package-manager reference is the **DNF5 generation introduced with Fedora 41**, as documented in the [accepted Fedora change](https://fedoraproject.org/wiki/Changes/SwitchToDnf5). Fedora 41 is historical context, not a recommendation to install it now. Choose an actually supported release from the official lifecycle/release information at the time of installation.
 
-The November 4, 2026 review verified the DNF5 transition and available upstream package/documentation sources, not a running Fedora VM. The portable exercise compares supplied variants using Bash and Python. Real policy/network queries require appropriate access and the relevant installed components.
+The November 4, 2026 Linux review used Fedora 44 Cloud Edition with DNF5 5.4.1.0 and SELinux enforcing; the [validation record](VALIDATION.md) identifies the observed managers and exact environment. The portable exercise compares supplied variants using Bash and Python. Real policy/network queries require appropriate access and the relevant installed components.
 
 ## What changes in practice
 
@@ -79,7 +79,7 @@ Expect the same family hint and preserved workstation/silverblue variant values.
 
 On a real system, verify exact release, supported lifecycle, variant, update/deployment manager, repository/image origin and security/network state. Explain which commands target the host versus a container or deployment image.
 
-No Fedora image was installed, no manager transition performed and no major upgrade exercised. Syntax and fixture checks do not establish Linux behavior or current support. See the [validation record](VALIDATION.md).
+The named conventional Fedora cloud VM was installed and its package, network/resolver and SELinux state observed. Atomic/bootc variants, manager transitions and major upgrades were not exercised. Those results do not establish current support for an arbitrary image. See the [validation record](VALIDATION.md).
 
 ## Cleanup
 

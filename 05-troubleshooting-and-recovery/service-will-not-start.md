@@ -128,9 +128,10 @@ systemctl --user reset-failed "$lab_unit"
 rm -i -- "$lab_unit_file"
 systemctl --user daemon-reload
 systemctl --user list-unit-files "$lab_unit" --no-pager
+printf 'unit listing status: %s\n' "$?"
 ```
 
-The final listing should contain no installed lab unit. The runtime user-unit directory can remain; do not remove a directory containing other units. Historical journal entries remain as evidence. Do not reset all host failures to hide this one exercise.
+The final listing should contain no installed lab unit. On the tested systemd 255, 257 and 259 versions, a pattern with no matching unit files returns status 1. That is the expected empty-result status after cleanup, not evidence that daemon-reload failed. The runtime user-unit directory can remain; do not remove a directory containing other units. Historical journal entries remain as evidence. Do not reset all host failures to hide this one exercise.
 
 ## References
 
