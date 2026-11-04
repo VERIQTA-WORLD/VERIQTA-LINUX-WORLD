@@ -25,7 +25,7 @@ LINUX-WORLD connects clear explanations with hands-on practice, complete project
 | [Production administration](06-production-administration) | Maintain server access, services, updates, backups and operational health. |
 | [Linux distributions](07-linux-distributions) | Understand distribution families and important administration differences. |
 | [Resources and reference](08-resources-and-reference) | Explore documentation, terminology and further learning. |
-| [Cheat sheets](09-cheat-sheets) | Find command-only sheets named by task across Linux and optional tools. |
+| [Cheat sheets](09-cheat-sheets) | Find task-based tables of Linux commands and what you can do with them. |
 
 ## Follow your learning path
 
