@@ -1,5 +1,7 @@
 # Mid-Level Linux Portfolio Projects
 
+Use the [project workflow](../project-workflow.md) before making changes. It explains readiness checks, acceptance evidence, recovery and cleanup across all levels.
+
 Build connected Linux platforms, automate repeatable operations, troubleshoot realistic failures, and produce work you can explain in a technical interview.
 
 The Mid-Level Linux Projects collection takes you beyond single-server administration. You will build web platforms, centralized logging, configuration management, high availability, security monitoring, disaster recovery, network services, container infrastructure, CI/CD, and an incident response environment.
@@ -21,7 +23,7 @@ Before starting, you should be comfortable with:
 - Bash scripts and command-line tools;
 - backups, restoration, and verification.
 
-If you are still building these foundations, begin with the [Junior Linux Portfolio Projects](../Junior/README.md).
+If you are still building these foundations, begin with the [Junior Linux Portfolio Projects](../01.%20Junior/README.md).
 
 ## What You Will Do Differently at Mid-Level
 
@@ -82,7 +84,7 @@ You will deploy the web, application, and database layers, secure communication,
 
 **Portfolio result:** A secured LEMP platform with a working application, repeatable deployment, passing tests, operational logs, and recovery evidence.
 
-[Start Project 01](./01-Production-LEMP-Web-Application-Platform/README.md)
+[Start Project 01](01.%20Portfolio%20Project%2001%3A%20Production%20LEMP%20Web%20Application%20Platform.md)
 
 ### 02. Centralized Linux Logging Platform
 
@@ -94,7 +96,7 @@ You will configure log senders and a central collector, protect log transport, o
 
 **Portfolio result:** A multi-server logging platform with secure collection, useful filtering, tested retention, search workflows, and delivery recovery.
 
-[Start Project 02](./02-Centralized-Linux-Logging-Platform/README.md)
+[Start Project 02](02.%20Portfolio%20Project%2002%3A%20Centralized%20Linux%20Logging%20Platform.md)
 
 ### 03. Automated Linux Configuration Management Platform
 
@@ -106,7 +108,7 @@ You will create an inventory, configure secure remote access, manage packages an
 
 **Portfolio result:** An Ansible-managed Linux fleet with reusable roles, consistent configuration, protected secrets, validation, drift correction, and rollback evidence.
 
-[Start Project 03](./03-Automated-Linux-Configuration-Management-Platform/README.md)
+[Start Project 03](03.%20Portfolio%20Project%2003%3A%20Automated%20Linux%20Configuration%20Management%20Platform.md)
 
 ### 04. Highly Available Linux Web Platform
 
@@ -118,7 +120,7 @@ You will deploy multiple web servers, place a load balancer in front of them, co
 
 **Portfolio result:** A redundant web platform that continues serving requests during a controlled backend failure.
 
-[Start Project 04](./04-Highly-Available-Linux-Web-Platform/README.md)
+[Start Project 04](04.%20Portfolio%20Project%2004%3A%20Highly%20Available%20Linux%20Web%20Platform.md)
 
 ### 05. Linux Security Monitoring Platform
 
@@ -130,7 +132,7 @@ You will monitor failed authentication, privileged actions, important file chang
 
 **Portfolio result:** A working security monitoring platform with tested detections, investigation evidence, triage notes, and remediation results.
 
-[Start Project 05](./05-Linux-Security-Monitoring-Platform/README.md)
+[Start Project 05](05.%20Portfolio%20Project%2005%3A%20Linux%20Security%20Monitoring%20Platform.md)
 
 ### 06. Linux Disaster Recovery Platform
 
@@ -142,7 +144,7 @@ You will identify critical data and services, define recovery objectives, automa
 
 **Portfolio result:** A tested recovery system with automated backups, verified restoration, measured RTO and RPO, and a usable recovery runbook.
 
-[Start Project 06](./06-Linux-Disaster-Recovery-Platform/README.md)
+[Start Project 06](06.%20Portfolio%20Project%2006%3A%20Linux%20Disaster%20Recovery%20Platform.md)
 
 ### 07. Linux Network Services Infrastructure
 
@@ -154,7 +156,7 @@ You will design an isolated network, deploy DNS and DHCP, create records and add
 
 **Portfolio result:** A working network-services environment with documented addressing, tested DNS and DHCP, useful logs, and recovery evidence.
 
-[Start Project 07](./07-Linux-Network-Services-Infrastructure/README.md)
+[Start Project 07](07.%20Portfolio%20Project%2007%3A%20Linux%20Network%20Services%20Infrastructure.md)
 
 ### 08. Containerized Linux Application Platform
 
@@ -166,7 +168,7 @@ You will create images, deploy containers, configure networks, attach persistent
 
 **Portfolio result:** A secured container platform with reproducible deployment, persistent data, resource controls, health checks, and tested recovery.
 
-[Start Project 08](./08-Containerized-Linux-Application-Platform/README.md)
+[Start Project 08](08.%20Portfolio%20Project%2008%3A%20Containerized%20Linux%20Application%20Platform.md)
 
 ### 09. Linux CI/CD Deployment Server
 
@@ -178,7 +180,7 @@ You will connect source control, create pipeline stages, manage credentials, run
 
 **Portfolio result:** A complete delivery pipeline with repeatable builds, automated tests, controlled deployment, release evidence, and verified rollback.
 
-[Start Project 09](./09-Linux-CI-CD-Deployment-Server/README.md)
+[Start Project 09](09.%20Portfolio%20Project%2009%3A%20Linux%20CI-CD%20Deployment%20Server.md)
 
 ### 10. Linux Incident Response Environment
 
@@ -190,7 +192,7 @@ You will establish a baseline, generate authorized test activity, collect eviden
 
 **Portfolio result:** A complete incident case file containing evidence, a timeline, root-cause analysis, containment actions, remediation, recovery tests, and prevention recommendations.
 
-[Start Project 10](./10-Linux-Incident-Response-Environment/README.md)
+[Start Project 10](10.%20Portfolio%20Project%2010%3A%20Linux%20Incident%20Response%20Environment.md)
 
 ## Recommended Learning Path
 
@@ -306,42 +308,29 @@ Do not commit passwords, private keys, tokens, personal information, employer da
 - [ ] I completed cleanup or restored the lab.
 - [ ] I can explain my decisions without reading the commands from the guide.
 
-## Repository Structure
+## Find the project files
 
-```text
-Mid-Level/
-├── README.md
-├── 01-Production-LEMP-Web-Application-Platform/
-├── 02-Centralized-Linux-Logging-Platform/
-├── 03-Automated-Linux-Configuration-Management-Platform/
-├── 04-Highly-Available-Linux-Web-Platform/
-├── 05-Linux-Security-Monitoring-Platform/
-├── 06-Linux-Disaster-Recovery-Platform/
-├── 07-Linux-Network-Services-Infrastructure/
-├── 08-Containerized-Linux-Application-Platform/
-├── 09-Linux-CI-CD-Deployment-Server/
-└── 10-Linux-Incident-Response-Environment/
-```
+Each project is a Markdown guide in this level’s directory. Use the project links above to open the guide; its opening navigation takes you directly to prerequisites, setup, implementation, testing, recovery and cleanup.
 
 ## Continue Your Linux Journey
 
 After completing the Mid-Level collection, continue with:
 
-- [Senior Linux Portfolio Projects](../Senior/README.md)
-- [Portfolio Capstones](../Portfolio-Capstones/README.md)
-- [Linux Troubleshooting](../../03-Troubleshooting/README.md)
-- [Linux Interview Preparation](../../05-Interview-Preparation/README.md)
+- [Senior Linux Portfolio Projects](../03.%20Senior/README.md)
+- [Portfolio Capstones](../03.%20Senior/10.%20Portfolio%20Capstone%20Project%2010%3A%20Enterprise%20Linux%20Infrastructure%20Architecture.md)
+- [Linux Troubleshooting](../../05-troubleshooting-and-recovery/README.md)
+- [Learning progress and evidence](../../00-start-here/learning-progress-checklist.md)
 
 ## Contributing
 
 Found an error or a clearer way to explain a step? Contributions that improve accuracy, safety, testing, distribution support, or accessibility are welcome.
 
-Read the repository [Contribution Guidelines](../../CONTRIBUTING.md), [Resource Standard](../../RESOURCE-STANDARD.md), [Security Policy](../../SECURITY.md), and [Code of Conduct](../../CODE_OF_CONDUCT.md) before submitting a change.
+Read the repository [Contribution Guidelines](../../CONTRIBUTING.md), [Content Standard](../../CONTENT-STANDARD.md) before submitting a change.
 
 ## License
 
-Linux World is distributed under the terms in the repository [LICENSE](../../LICENSE) and [NOTICE](../../NOTICE.md). Review those terms before copying, modifying, or redistributing the project content.
+Linux World is distributed under the terms in the repository [LICENSE](../../LICENSE.md) and [NOTICE](../../NOTICE.md). Review those terms before copying, modifying, or redistributing the project content.
 
 ---
 
-Ready to begin? Start with [Project 01: Production LEMP Web Application Platform](./01-Production-LEMP-Web-Application-Platform/README.md).
+Ready to begin? Start with [Project 01: Production LEMP Web Application Platform](01.%20Portfolio%20Project%2001%3A%20Production%20LEMP%20Web%20Application%20Platform.md).
