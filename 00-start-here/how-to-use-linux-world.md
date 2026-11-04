@@ -4,23 +4,20 @@ Linux World combines several kinds of material. Pick the form that answers your 
 
 | Material | Use it for | Location |
 | --- | --- | --- |
-| Lessons | Learn concepts and prerequisites progressively | [Existing beginner-to-advanced collection](../01-Beginner-to-Advanced) |
-| Labs | Practise a bounded skill or controlled failure | [Existing labs](../02-Labs) and documented exercises within guides |
-| Projects | Combine skills into a working system | [Existing projects](../03-Projects) |
+| Lessons | Learn concepts and prerequisites progressively | [Beginner-to-advanced collection](../01-Beginner-to-Advanced) |
+| Labs | Practise a bounded skill or controlled failure | [Labs](../02-Labs) and documented exercises within guides |
+| Projects | Combine skills into a working system | [Projects](../03-Projects) |
 | Detailed command references | Understand syntax, effects, examples and verification | [Command reference](../04-command-reference/README.md) |
 | Cheat sheets | Quickly find a command and its purpose | [Consolidated cheat-sheet index](../04-command-reference/cheat-sheet-index.md) |
 | Troubleshooting | Choose checks that distinguish competing explanations | [Troubleshooting and recovery](../05-troubleshooting-and-recovery/README.md) |
 | Runbooks | Plan, perform, verify and recover from administration work | [System administration](../06-system-administration/README.md) |
-| Comparisons and reference | Understand product differences and locate supporting material | [Distributions](../07-linux-distributions/README.md) and [reference library plan](../08-resources-and-reference/README.md) |
+| Comparisons and reference | Understand product differences and locate supporting material | [Distributions](../07-linux-distributions/README.md) and [reference library](../08-resources-and-reference/README.md) |
 
-## Understand completion and validation labels
+## Read the execution evidence
 
-- **Planned:** a scope page exists; course material has not been built.
-- **Written:** explanations and examples exist; this does not claim execution on every target.
-- **Portable exercise checked:** the named bounded example was executed in the environment recorded by its validation page.
-- **Linux validation pending:** the relevant host, manager, policy or distribution behavior still needs reproduction.
+Use each collection's validation record to check the environment, commands and results behind an exercise. Distinguish syntax checks, portable execution and Linux-specific behavior when comparing those results with your own system.
 
-A successful syntax check does not prove tool availability, runtime behavior or production readiness. Consult each collection's validation record and preserve its limitations in your own notes.
+A successful syntax check does not prove tool availability, runtime behavior or production readiness. Record your distribution, tool versions, permissions and observed results so another reader can reproduce your work.
 
 ## Use a repeatable learning cycle
 

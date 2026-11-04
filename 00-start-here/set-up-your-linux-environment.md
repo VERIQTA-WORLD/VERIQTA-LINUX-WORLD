@@ -11,7 +11,7 @@ Use an environment whose scope matches the exercise. For full-host administratio
 | Existing workstation | Selected read-only observations and temporary-file exercises | Your data and active work make destructive experiments inappropriate |
 | Non-Linux host | Exercises explicitly described and recorded as portable | Portable success does not establish Linux-specific behavior |
 
-Do not repartition, dual-boot, replace an existing OS or modify real cloud resources just to follow an introductory file exercise. The planned desktop collection will need its own tested installation procedures.
+Do not repartition, dual-boot, replace an existing OS or modify real cloud resources just to follow an introductory file exercise. For installation and workstation topics, use the [desktop and workstation collection](../09-desktop-and-workstation-linux/README.md) and your distribution’s official instructions.
 
 ## Prepare recovery and prerequisites
 
