@@ -1,0 +1,25 @@
+```bash
+grep -- PATTERN FILE
+grep -n -- PATTERN FILE
+grep -nF -- 'LITERAL TEXT' FILE
+grep -ni -- PATTERN FILE
+grep -nE -- 'PATTERN_ONE|PATTERN_TWO' FILE
+grep -v -- PATTERN FILE
+grep -c -- PATTERN FILE
+grep -l -- PATTERN FILE_ONE FILE_TWO
+grep -L -- PATTERN FILE_ONE FILE_TWO
+grep -w -- WORD FILE
+grep -x -- LINE FILE
+grep -A 3 -B 3 -- PATTERN FILE
+grep -rIn -- PATTERN DIRECTORY
+grep -rIl -- PATTERN DIRECTORY
+grep -q -- PATTERN FILE
+rg PATTERN DIRECTORY
+rg -n -i PATTERN DIRECTORY
+rg -F 'LITERAL TEXT' DIRECTORY
+rg -g '*.conf' PATTERN DIRECTORY
+rg --files DIRECTORY
+rg -l PATTERN DIRECTORY
+rg -v PATTERN FILE
+zgrep -n -- PATTERN FILE.gz
+```
