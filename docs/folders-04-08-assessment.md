@@ -71,10 +71,16 @@ Before claiming a tested Linux release, record its `/etc/os-release`, kernel, sh
 4. Build folder 7 with release-labelled comparisons verified against distribution documentation.
 5. Build folder 8 with a glossary, filesystem/configuration/log reference and maintained official learning sources.
 
-Folders 5–8 remain scaffolded in this change. Their existing index links are not evidence of completed guides. They should not be promoted as finished learning paths until their content and exercises pass review.
+At the initial November 3 assessment, folders 5–8 remained scaffolded. See the follow-up below for later progress. Their existing index links are not evidence of completed guides. They should not be promoted as finished learning paths until their content and exercises pass review.
 
 ## Publication and licensing
 
 The owner selected personal-study permission with written permission required for modification or redistribution. The custom license is restrictive and should be described as public educational content, not open source. GitHub’s public-repository viewing/forking rights and applicable statutory rights remain exceptions. Third-party rights and any prior grants must be respected; the draft cannot relicense material the owner does not control.
 
 The [custom license](../LICENSE.md) is an owner-requested drafting aid, not a legal opinion. Obtain legal review of the rights-holder identity, jurisdiction, permissions workflow and compatibility with public hosting before publication. No remote push is part of this local implementation.
+
+## Follow-up: November 4, 2026
+
+Folder 5 now contains the shared troubleshooting method, eight symptom guides and recovery-verification guidance. Each guide includes environment assumptions, evidence interpretation, a controlled exercise, recovery acceptance and cleanup. Two bounded Python helpers support loopback HTTP and process observation.
+
+The portable method, offline SSH, reachability and verification exercises have execution evidence. Linux-only systemd, DNS/NSS, tmpfs, /proc and boot checks remain pending. See the [folder 5 validation record](../05-troubleshooting-and-recovery/VALIDATION.md) before treating a scenario as tested. Folders 6–8 remain scaffolded. The remaining sequence is Linux reproduction and review, then production administration, distribution-specific notes and supporting references.
