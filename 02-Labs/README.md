@@ -223,7 +223,7 @@ The labs are organized by level, then by subject, then by lab number. See the co
 
 ## Continue Through Linux World
 
-- [Start Here](../00-Start-Here/README.md)
+- [Start Here](../00-start-here/README.md)
 - [Beginner to Advanced](../01-Beginner-to-Advanced/README.md)
 - [Commands and Cheat Sheets](../02-Commands-and-Cheat-Sheets/README.md)
 - [Troubleshooting](../03-Troubleshooting/README.md)

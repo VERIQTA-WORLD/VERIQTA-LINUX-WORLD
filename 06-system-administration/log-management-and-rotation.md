@@ -111,6 +111,6 @@ If interrupted before rotation, some files may not exist; inspect the temporary 
 
 - [logrotate configuration and debug behavior](https://man7.org/linux/man-pages/man8/logrotate.8.html).
 - [journald configuration](https://www.freedesktop.org/software/systemd/man/latest/journald.conf.html) and [journal queries](https://www.freedesktop.org/software/systemd/man/latest/journalctl.html).
-- [Log investigation reference](../04-commands-and-cheat-sheets/processes-and-services/journalctl-reference.md).
+- [Log investigation reference](../04-command-reference/processes-and-services/journalctl-reference.md).
 
 [Collection home](README.md)

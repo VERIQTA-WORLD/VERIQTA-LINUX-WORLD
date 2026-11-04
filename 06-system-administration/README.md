@@ -1,8 +1,20 @@
-# Production administration
+# System administration
 
-![Production administration](../assets/images/06-production-administration-cover.svg)
+![System administration](../assets/images/06-production-administration-cover.svg)
 
-Learn to operate Linux services through planned, verifiable work. Production administration includes understanding the service owner and dependencies, assessing a proposed change, preserving a recovery path, performing the work and proving the intended user outcome. Running a privileged command is only one part of that responsibility.
+Learn to operate individual Linux hosts and reason about changes across fleets through planned, verifiable work. Understand ownership and dependencies, assess the proposed change, preserve a recovery path, perform the work and prove the intended outcome. Running a privileged command is only one part of that responsibility.
+
+## Choose your operating scope
+
+| Scope | Apply the runbooks this way | Additional evidence |
+| --- | --- | --- |
+| Individual learning or personal host | Work on the exact system, preserve important data and use a recoverable lab for failures | Actual identity, local baseline, recovery path, verification and cleanup |
+| Fleet of hosts | Define authoritative inventory, groups, concurrency and dependency boundaries; begin with a representative canary and gate each batch | Per-host outcomes, drift, failed/unreachable hosts, stop thresholds and a compatible rollback plan |
+| Production workload, including a single host | Add authorized ownership, user-impact assessment, change window, communications and tested data/service recovery | End-to-end acceptance, monitoring/response ownership and a recorded return-to-service decision |
+
+A fleet is not simply a larger shell loop. Prevent a change from affecting all quorum members, replicas or recovery paths at once unless the architecture explicitly supports it. Verify success per host and across the service; do not silently count an unreachable machine as updated. Future fleet automation belongs in the [planned automation collection](../10-automation-and-reproducibility/README.md), with reproducible inventory and rollout tests.
+
+**Production requirements:** before a real production change, establish authority, console/recovery access, compatible backups or rebuild/restore evidence, dependency/traffic handling, a bounded rollout, acceptance criteria and a stop/rollback decision owner. Those requirements apply even when only one host exists. The existing exercises are bounded teaching examples, not tested fleet deployments or production authorization.
 
 ## Choose a runbook
 
@@ -47,4 +59,4 @@ A valid configuration, an active unit, a successful backup job and a healthy ser
 
 The exercises are deliberately smaller than real operations. File-based simulations do not reproduce a live database, a package maintainer script, distributed failover or infrastructure deletion. See [validation and reproduction requirements](VALIDATION.md) for what was actually tested and what remains pending.
 
-[Command explanations](../04-commands-and-cheat-sheets/README.md) · [Command tables](../09-cheat-sheets) · [Troubleshooting](../05-troubleshooting-and-recovery/README.md) · [LINUX-WORLD](../README.md)
+[Command explanations](../04-command-reference/README.md) · [Command tables](../04-command-reference/cheat-sheets) · [Troubleshooting](../05-troubleshooting-and-recovery/README.md) · [LINUX-WORLD](../README.md)

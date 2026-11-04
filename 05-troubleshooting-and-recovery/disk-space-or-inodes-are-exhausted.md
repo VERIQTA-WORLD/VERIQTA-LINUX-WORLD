@@ -164,6 +164,6 @@ Unmounting tmpfs discards anything remaining in it. If interrupted, inspect `fin
 
 - [Kernel tmpfs documentation](https://docs.kernel.org/filesystems/tmpfs.html).
 - [df and file utilities](https://www.gnu.org/software/coreutils/manual/coreutils.html), [lsof](https://man7.org/linux/man-pages/man8/lsof.8.html) and [LVM reporting](https://man7.org/linux/man-pages/man8/lvs.8.html).
-- [Disk and filesystem commands](../04-commands-and-cheat-sheets/storage/disk-and-filesystem-commands.md).
+- [Disk and filesystem commands](../04-command-reference/storage/disk-and-filesystem-commands.md).
 
 [Collection home](README.md) · [Recovery verification](verify-recovery-after-a-fix.md)

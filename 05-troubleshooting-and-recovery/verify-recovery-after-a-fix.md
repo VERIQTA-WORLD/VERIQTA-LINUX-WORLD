@@ -127,7 +127,7 @@ If its lifetime already elapsed, inspect jobs/process identity before signalling
 
 - [curl response and failure handling](https://curl.se/docs/manpage.html).
 - [File comparison with cmp](https://www.gnu.org/software/diffutils/manual/diffutils.html).
-- [Restore command reference](../04-commands-and-cheat-sheets/backup-and-recovery/recovery-command-reference.md).
+- [Restore command reference](../04-command-reference/backup-and-recovery/recovery-command-reference.md).
 - [Troubleshooting method](linux-troubleshooting-method.md).
 
 [Collection home](README.md)

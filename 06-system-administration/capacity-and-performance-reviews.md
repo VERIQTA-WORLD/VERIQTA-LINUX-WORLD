@@ -108,7 +108,7 @@ No workload, resource limit, device size or data-retention policy changed.
 ## References
 
 - [vmstat](https://man7.org/linux/man-pages/man8/vmstat.8.html), [sysstat iostat](https://sysstat.github.io/man/iostat.1.html) and [kernel pressure accounting](https://docs.kernel.org/accounting/psi.html).
-- [Performance reference](../04-commands-and-cheat-sheets/performance/performance-investigation-cheat-sheet.md).
+- [Performance reference](../04-command-reference/performance/performance-investigation-cheat-sheet.md).
 - [Disk exhaustion investigation](../05-troubleshooting-and-recovery/disk-space-or-inodes-are-exhausted.md).
 
 [Collection home](README.md)

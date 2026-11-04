@@ -123,7 +123,7 @@ No keys, accounts, host trust entries or server policy were changed. Write a not
 ## References
 
 - [OpenSSH client](https://man.openbsd.org/ssh), [server](https://man.openbsd.org/sshd) and [server configuration](https://man.openbsd.org/sshd_config).
-- [SSH command reference](../04-commands-and-cheat-sheets/networking/ssh-reference.md).
+- [SSH command reference](../04-command-reference/networking/ssh-reference.md).
 - [Server reachability](server-is-unreachable.md) for failures before authentication.
 
 [Collection home](README.md) · [Troubleshooting method](linux-troubleshooting-method.md)

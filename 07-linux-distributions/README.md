@@ -18,7 +18,7 @@ Learn what Linux distributions share, what they change, and how to adapt adminis
 | Understand mandatory access control | [AppArmor and SELinux](apparmor-and-selinux-overview.md) | Combine ordinary permissions and a separate policy decision |
 | Keep a compact reference | [Distribution differences](distribution-differences-quick-reference.md) | Build a comparison checklist with unknowns left visible |
 
-Read the family guide first, then choose a distribution guide and use the package/security comparisons alongside it. These pages connect the [command references](../04-commands-and-cheat-sheets/README.md), [troubleshooting guides](../05-troubleshooting-and-recovery/README.md) and [administration runbooks](../06-production-administration/README.md).
+Read the family guide first, then choose a distribution guide and use the package/security comparisons alongside it. These pages connect the [command references](../04-command-reference/README.md), [troubleshooting guides](../05-troubleshooting-and-recovery/README.md) and [administration runbooks](../06-system-administration/README.md).
 
 ## Baselines and claims
 

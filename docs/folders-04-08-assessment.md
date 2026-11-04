@@ -59,7 +59,7 @@ A command reference cannot contain every Linux feature. This installment covers 
 
 ## Quality gates and evidence
 
-Structural checks enforce nonempty pages, the reference contract, balanced fences, Bash syntax and case-exact local links in folder 4 and the root README. Portable walkthroughs can be checked locally in temporary directories. Linux-specific commands require real distribution testing; a macOS syntax check is not Linux execution evidence. The [validation record](../04-commands-and-cheat-sheets/VALIDATION.md) separates completed checks from pending ones.
+Structural checks enforce nonempty pages, the reference contract, balanced fences, Bash syntax and case-exact local links in folder 4 and the root README. Portable walkthroughs can be checked locally in temporary directories. Linux-specific commands require real distribution testing; a macOS syntax check is not Linux execution evidence. The [validation record](../04-command-reference/VALIDATION.md) separates completed checks from pending ones.
 
 Before claiming a tested Linux release, record its `/etc/os-release`, kernel, shell/tool versions, exact walkthrough, expected and actual observations, cleanup result and reviewer/date. Prioritize Debian/Ubuntu with systemd for APT and service checks, and a Fedora/RHEL-family VM for DNF and firewalld. Confirm installed versions rather than assuming current defaults.
 
@@ -87,7 +87,7 @@ The portable method, offline SSH, reachability and verification exercises have e
 
 ## Follow-up: production administration, November 4, 2026
 
-Folder 6 now has ten runbooks with prerequisites, operating procedures, isolated practice, verification/rollback and cleanup. Eight portable exercises and the demonstration configuration validator have execution evidence; systemd, logrotate, visudo, package proposals and actual host/notification/retirement workflows still require Linux or platform review. See the [folder 6 validation record](../06-production-administration/VALIDATION.md). Folders 7–8 remain scaffolded.
+Folder 6 now has ten runbooks with prerequisites, operating procedures, isolated practice, verification/rollback and cleanup. Eight portable exercises and the demonstration configuration validator have execution evidence; systemd, logrotate, visudo, package proposals and actual host/notification/retirement workflows still require Linux or platform review. See the [folder 6 validation record](../06-system-administration/VALIDATION.md). Folders 7–8 remain scaffolded.
 
 ## Follow-up: Linux distributions, November 4, 2026
 

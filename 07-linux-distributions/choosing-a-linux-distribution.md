@@ -80,6 +80,6 @@ No image was downloaded or deployed.
 
 - [Ubuntu releases and coverage](https://ubuntu.com/about/release-cycle).
 - [Debian releases](https://www.debian.org/releases/) and [RHEL lifecycle policy](https://access.redhat.com/support/policy/updates/errata).
-- [Server readiness](../06-production-administration/linux-server-readiness-checklist.md).
+- [Server readiness](../06-system-administration/linux-server-readiness-checklist.md).
 
 [Collection home](README.md) · [Distribution families](understanding-linux-distribution-families.md)
