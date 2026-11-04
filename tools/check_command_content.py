@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check folders 4 and 5 content, local links and Bash syntax without executing examples."""
+"""Check folders 4, 5 and 6 content, local links and Bash syntax without executing examples."""
 from pathlib import Path
 import os
 import ast
@@ -11,6 +11,16 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 COLLECTION = ROOT / '04-commands-and-cheat-sheets'
 RECOVERY = ROOT / '05-troubleshooting-and-recovery'
+ADMINISTRATION = ROOT / '06-production-administration'
+ADMIN_REQUIRED = (
+    '## Environment and permissions',
+    '## Before you begin',
+    '## Operating procedure',
+    '## Follow-along lab',
+    '## Verification and rollback',
+    '## Cleanup',
+    '## References',
+)
 RECOVERY_REQUIRED = (
     '## Environment and permissions',
     '## Evidence and interpretation',
@@ -45,11 +55,13 @@ def exact_exists(path):
 
 def check():
     errors = []
-    files = sorted(COLLECTION.rglob('*.md')) + sorted(RECOVERY.glob('*.md')) + [ROOT / 'README.md', ROOT / 'docs/folders-04-08-assessment.md', ROOT / 'CONTRIBUTING.md', ROOT / 'NOTICE.md', ROOT / 'LICENSE.md']
+    files = sorted(COLLECTION.rglob('*.md')) + sorted(RECOVERY.glob('*.md')) + sorted(ADMINISTRATION.glob('*.md')) + [ROOT / 'README.md', ROOT / 'docs/folders-04-08-assessment.md', ROOT / 'CONTRIBUTING.md', ROOT / 'NOTICE.md', ROOT / 'LICENSE.md']
     references = [p for p in COLLECTION.glob('*/*.md') if p.name != 'README.md']
     recovery_guides = [p for p in RECOVERY.glob('*.md') if p.name not in {'README.md', 'VALIDATION.md'}]
     contracts = {p: REQUIRED for p in references}
     contracts.update({p: RECOVERY_REQUIRED for p in recovery_guides})
+    admin_guides = [p for p in ADMINISTRATION.glob('*.md') if p.name not in {'README.md', 'VALIDATION.md'}]
+    contracts.update({p: ADMIN_REQUIRED for p in admin_guides})
     blocks = 0
     links = 0
     for path in files:
