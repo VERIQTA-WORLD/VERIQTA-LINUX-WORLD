@@ -40,6 +40,6 @@ Read command blocks as selected checks. Uppercase tokens such as PACKAGE, UNIT a
 
 For every real comparison, record distribution ID/release/variant, kernel and architecture, package-manager implementation, repository origins, service manager, networking owner, resolver, active security policy and support source/date. Keep “not observed” separate from “absent” or “disabled.”
 
-[Validation record](VALIDATION.md) separates portable fixture execution from Linux observations still pending. No VM installation, major-version upgrade, security-mode change or distribution certification was performed in this authoring pass.
+[Validation record](VALIDATION.md) identifies reproduced exercises and actual package, manager and policy observations on Ubuntu 24.04, Debian 13 and Fedora 44 VMs. It also states the boundaries for other products, image variants, upgrades and policy changes.
 
 [LINUX-WORLD](../README.md) · [Content standard](../CONTENT-STANDARD.md)

@@ -48,7 +48,7 @@ python3 --version
 
 Record actual versions. If a command is absent, read the lab to determine whether it is required before installing it. Use that distribution's supported package workflow and review proposed changes. Do not run a downloaded install script merely to match a screenshot.
 
-JUN-071–083 use Bash and Python 3.8+ without third-party Python dependencies for their supplied-data tools. Other labs have their own tool contracts; check them individually rather than installing every named utility at once.
+Each lab has its own tool and interpreter requirements. Check them individually rather than installing every named utility at once.
 
 ## 4. Verify the service manager and network boundary
 
@@ -65,11 +65,11 @@ Installed systemctl alone does not establish that the expected manager is runnin
 
 For networking, keep the lab private. Use host-only/isolated networks where the exercise calls for them and a deliberate package-download route when needed. Record each VM's role and address. Do not bridge an experimental DHCP server into your home, workplace or public network.
 
-Loopback-only servers in the operations category bind 127.0.0.1 and request an available port. If a sandbox prohibits local listeners, record that restriction and skip the live extension; never substitute a public bind address.
+When an exercise uses a local listener, follow its stated bind address and port. If your environment prohibits listeners, record that restriction; never substitute a public bind address.
 
 ## 5. Create private workspaces
 
-Follow the exact workspace setup in each lab. The new operations labs use a unique directory per run under `~/veriqta-linux-labs`, so rerunning an exercise does not overwrite an earlier investigation.
+Follow the exact workspace setup in each lab. Inspect the destination before creating or replacing files, and keep earlier investigations separate from a fresh run.
 
 Keep your current shell and workspace variable until cleanup. If you resume later, recover the exact directory deliberately and inspect it before using cleanup commands; do not guess from an old path or PID.
 

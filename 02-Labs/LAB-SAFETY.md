@@ -38,7 +38,7 @@ Stop dependent changes when you see an unexpected error. Preserve the output, ve
 
 Map the exact path to its mount before interpreting capacity. Inspect bytes, inodes, quota evidence and mount state independently. Never fill the real filesystem hosting your OS or application to reproduce a space problem.
 
-The optional JUN-081 kernel experiment requires an exact verified tmpfs mount with an 8 MiB size and 128-inode cap. If its mount verification fails, do not run the writer against the ordinary parent directory. If unmount fails, stop deletion and investigate mount users; a failed unmount must not be followed by recursive workspace removal.
+For a bounded mount exercise, verify the exact mount, filesystem type and limits before writing. If mount verification fails, do not run a writer against the ordinary parent directory. If unmount fails, stop deletion and investigate mount users.
 
 Do not remove a backing image, logical volume or mountpoint while it is still in use. A lab reset can discard data; preserve any evidence you intend to retain before using it.
 

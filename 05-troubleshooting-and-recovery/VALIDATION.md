@@ -1,66 +1,49 @@
-# Validation record
+# Tested recovery exercises
 
-Recorded November 4, 2026. All ten guide pages are written. This record distinguishes executed exercises from Linux-only validation that is still pending. The collection is ready for content review, not certified across distributions or production environments.
+Linux execution review: November 4, 2026. The bounded guide exercises were reproduced on Ubuntu 24.04.5 LTS, Debian 13.7 and Fedora Linux 44 Cloud Edition, each a separately booted aarch64 VM. Exact kernels and utility versions appear in the [environment matrix](../04-command-reference/VALIDATION.md#named-linux-environments).
 
-## Checks completed
+## Observed Linux results
 
-| Check | Method | Result and scope |
-| --- | --- | --- |
-| Guide structure | `python3 tools/check_command_content.py` | Enforces environment, evidence/interpretation, lab, recovery/verification, cleanup and references in all ten guides |
-| Links and Markdown | Same checker and `git diff --check` | Case-exact local paths, linked heading anchors, balanced fences, escaped table pipes and changed-line whitespace |
-| Shell syntax | Same checker | Parses Bash blocks without executing Linux diagnostics or privileged changes |
-| Embedded Python syntax | Same checker | Parses the two disk-exercise Python heredocs without running them |
-| Method exercise | `python3 tools/check_recovery_labs.py` | Published synthetic-evidence, competing-hypothesis and conclusion steps executed, including cleanup |
-| Offline SSH exercise | Same portable runner | Isolated configuration resolved first to port 65022 and then 22; temporary file removed; optional authentication test excluded |
-| Reachability exercise | Same portable runner | Observed ready response, connection failure after stopping the child, recovery with a new helper and cleanup |
-| Acceptance exercise | Same portable runner | Confirmed successful HTTP with wrong content fails comparison; corrected content and five repeated samples pass; cleanup confirmed |
-| HTTP helper | Same portable runner | Correct loopback response, bounded exit with an unfinished request and rejection of an excessive requested lifetime |
-| Worker helper | Same portable runner | One-second, 1 MiB allocation completes; excessive memory/time requests are rejected |
+| Exercise | Actual result and recovery evidence |
+| --- | --- |
+| Troubleshooting method | Supplied evidence, competing hypotheses and conclusion steps passed on all targets; temporary evidence was removed. |
+| Reachability | The loopback helper returned the expected response, connection failed after its exact child stopped, a new helper restored the response and cleanup passed. |
+| SSH | Offline configuration resolved first to 65022, then the exercise's approved port 22. A separate real port-22 key-authenticated session returned the expected account/host on each VM using independently provisioned host trust. Temporary fixture credentials/agent were removed and original access/trust files restored. |
+| Failed user service | `/usr/bin/false` produced failed state and ExecMainStatus=1. Replacing only the exercise command with true produced active/exited, success and status 0. The exact runtime file was removed. |
+| Byte exhaustion | The verified 8 MiB/128-inode tmpfs produced kernel ENOSPC during bounded writes while inodes remained available; only the exercise payload was removed. |
+| Inode exhaustion | The same bounded mount produced ENOSPC after its inode limit was reached by empty files. Removing only the generated inode files restored a successful write/read; unmount and directory cleanup passed. |
+| CPU/memory | The 20-second child touched 16 MiB, appeared in its actual `/proc`/process observations and completed with status 0. Its final process query had no matching row; files were removed. No OOM was induced. |
+| DNS/NSS | The `.invalid` lookup returned nonzero (glibc getent status 2); localhost returned loopback data and status 0. Dig's actual DNS response was retained separately. No resolver setting changed. |
+| Read-only mount | A separate 4 MiB tmpfs accepted the initial write, rejected append with EROFS/nonzero status after ro remount, then accepted the expected second line after rw remount. Unmount and cleanup passed. |
+| Alternate fstab | Missing placeholder UUID produced verification status 1; the corrected alternate tmpfs entry produced 0. No entry was mounted and real fstab/boot settings were unchanged. |
+| Recovery acceptance | HTTP success with wrong content failed the comparison; corrected content and five repeated samples passed. Exact-child and temporary-file cleanup passed. |
 
-The authoring host is macOS/Darwin with Python 3.9.6, Bash 3.2.57 and curl 8.7.1. The portable runner supplies confirmation replies separately to each interactive cleanup command and verifies that each exercise directory is removed. These runs are not Linux `/proc`, systemd, tmpfs, NSS or fstab validation. No privileged recovery command was executed.
+The helper checks also verified bounded exit with an unfinished HTTP request, rejection of excessive lifetime/memory requests and a one-second/1 MiB worker. Those checks ran on all three Linux targets as well as in the earlier portable review.
 
-The sandbox blocks loopback listeners by default. The portable HTTP checks were run with approved local execution outside that restriction; they use only 127.0.0.1, temporary files and bounded processes. A first sandboxed attempt could not start its listeners; the final successful run used the documented helper behavior. No external service or production configuration is involved.
+## Correction from actual execution
 
-## Run the checks yourself
+After runtime-unit cleanup, `systemctl --user list-unit-files PATTERN` returned 1 when no unit files matched on systemd 255, 257 and 259. The [failed-service guide](service-will-not-start.md#cleanup) now prints and explains that expected empty-result status. A nonzero diagnostic result must be interpreted in context, not confused with a failed repair.
 
-From the repository root:
+## Reproduce and keep evidence
+
+Use the prerequisites and stop conditions in each guide. The shared Linux runner requires an explicitly disposable VM, ordinary account, working user manager and authorized sudo. It performs the bounded mount exercises; it is not a production-host checker.
 
 ```bash
-python3 tools/check_command_content.py
-python3 tools/check_recovery_labs.py
-python3 tools/check_cheat_sheets.py
-git diff --check
+private_results=$(mktemp -d)
+python3 tools/check_linux_exercises.py --confirm-disposable-vm \
+  --report "$private_results/results.json"
 ```
 
-The content checker does not execute commands. The portable recovery runner **does** execute selected unprivileged lab snippets, launches short-lived loopback servers and starts a one-second worker. Review it first; run it where local listener creation is allowed. It never mounts filesystems, uses sudo, edits host policy, connects to an SSH server or sends DNS queries. Optional packages and platform utilities still need checking on the target environment.
+Run from the repository root. Read [runner preparation and scope](../04-command-reference/VALIDATION.md#reproduce-on-your-disposable-vm) first. The default automation reproduces the offline SSH exercise; the authenticated session additionally requires independently verified host identity and a known-good key as described in the SSH guide. Never weaken host-key checking to turn an unavailable fixture into a pass.
 
-## Linux reproduction still required
+The runner retains actual stdout/stderr and intermediate statuses in a private 0600 report. Record repository revision, target identity, versions, privilege/scope, expected/actual outcomes and cleanup. Review redactions before sharing any evidence.
 
-| Guide or behavior | Environment and acceptance | Status |
-| --- | --- | --- |
-| systemd user-service failure/recovery | Disposable systemd VM with a working user manager, runtime unit, exit 1 evidence, corrected exit 0 and exact unit cleanup | Pending |
-| Byte and inode exhaustion | Disposable VM, 8 MiB/128-inode tmpfs, both ENOSPC mechanisms, successful write after cleanup and successful unmount | Pending |
-| Read-only mount failure/recovery | Disposable VM, separate 4 MiB tmpfs, observed ro write failure, rw recovery and unmount | Pending |
-| CPU/memory investigation | Linux procps, `/proc` and optional sysstat; 20-second/16 MiB worker observed in the correct scope | Pending |
-| DNS/NSS exercise | Linux with glibc getent; optional dig; capture actual invalid-name and localhost outcomes without resolver changes | Pending |
-| Alternate fstab verification | Linux util-linux; absent placeholder source rejected, intended tmpfs entry accepted, no live mount performed | Pending |
-| SSH server authentication/session | Authorized VM, independently verified host identity and known-good key; second session verified without changing server policy | Pending |
-| Console boot observations | Snapshotted disposable VM; identify stages, kernel/root identities and required mounts; no induced boot failure | Pending |
-| Distribution differences | Reproduce appropriate checks on one Debian/Ubuntu-family and one Fedora/RHEL-family system, recording actual versions and deviations | Pending |
-| GitHub visual layout and independent reader review | Inspect rendered tables/code; reproduce scenarios without unstated setup | Pending |
+## What these exercises establish
 
-Docker's daemon was unavailable, and Lima had no configured VM. No Linux VM was created or used during this authoring pass. Do not mark a scenario tested merely because its syntax check passed.
+The tests reproduce the documented bounded mechanisms and cleanup on the three named environments. Fedora retained SELinux enforcing. They do not reproduce a corrupt production filesystem, a real unbootable machine, OOM, every NSS/SSH policy, remote routing failure or an application-specific data recovery.
 
-## Evidence to retain for each Linux run
+Normal running-guest boot/root/mount observations were collected, but no induced boot failure, rescue-shell repair, firmware/bootloader alteration or console-driven rollback was performed. Alternate-file verification is not a successful reboot test. GitHub rendering and independent reader review remain separate checks.
 
-Record reviewer/date, repository commit, distribution/release, kernel, Bash, Python and relevant utility versions. State privileges, namespace/container scope, optional packages and recovery access. Record exact steps, expected and actual observations, meaningful nonzero statuses, corrections and cleanup confirmation. Keep secrets and raw private evidence outside the public repository.
-
-If a lab fails, preserve the relevant bounded output, stop dependent steps and investigate the difference. Do not remove the safety bound, substitute a real disk, disable security policy or force a reboot just to obtain the illustrated result. Update the guide and rerun the affected check after the cause is understood.
-
-## Documentation review
-
-Selected semantics were checked against upstream Linux/util-linux manuals, systemd, OpenSSH, BIND, RFC 2606, curl, Python and kernel tmpfs documentation linked within the guides. This is selective source review, not an exhaustive external-link availability test or independent operational review. Filesystem-specific repair recipes are deliberately not presented as universal commands.
-
-The repository's existing custom personal-study license remains in effect. This content change does not alter reuse permissions or convert the project to an open-source license.
+The original portable checks used macOS; those results are not substituted for the Linux observations above. No system resolver, host firewall policy, mandatory enforcement or production service was changed by an exercise.
 
 [Collection home](README.md) · [Content standard](../CONTENT-STANDARD.md)

@@ -1,6 +1,6 @@
 # Track your Linux lab progress
 
-Keep this record in your own private notes. You do not need to edit the public repository to record personal progress. Use the [Junior index](Junior/README.md) to open each of the 83 numbered lab guides.
+Keep this record in your own private notes. You do not need to edit the public repository to record personal progress. Use the [Junior index](Junior/README.md) to open each of the 70 numbered lab guides.
 
 [Lab home](README.md) · [Lab standard](LAB-STANDARD.md) · [Safety](LAB-SAFETY.md)
 
@@ -59,9 +59,7 @@ Next lab or prerequisite to revisit:
 | JUN-035–043 | Identify the correct storage layer and mount, understand capacity and use only confirmed disposable storage for changes. |
 | JUN-044–057 | Explain addresses, routes, names, ports and the client/server boundary; preserve recovery access. |
 | JUN-058–068 | Write and explain Bash input/output, conditions, loops, functions, statuses, failure handling and scheduled execution. |
-| JUN-069–076 | Interpret scoped logs and interval measurements without inventing a diagnosis from a single counter. |
-| JUN-077–078 | Combine fresh evidence, retain unknowns, investigate alternatives and repeat the same acceptance operation after repair. |
-| JUN-079–083 | Recover controlled service, access, storage and connectivity failures within exact lab boundaries. |
+| JUN-069–070 | Interpret scoped logs and journal records while separating recorded facts from hypotheses. |
 
 A range being read does not mean every capability is demonstrated. Choose the lab whose checkpoint exposes the gap and reproduce a smaller exercise before proceeding.
 

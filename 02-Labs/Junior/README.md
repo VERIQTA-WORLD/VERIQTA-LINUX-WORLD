@@ -1,6 +1,6 @@
 # Junior Linux labs
 
-Build your Linux foundation through 83 numbered follow-along labs. Start with navigation, then work through files, access, processes, storage, networking, Bash and evidence-based troubleshooting.
+Build your Linux foundation through 70 numbered follow-along labs. Start with navigation, then work through files, access, processes, storage, networking, Bash and evidence-based troubleshooting.
 
 [Linux World Labs](../README.md) · [Environment](../LAB-ENVIRONMENT.md) · [Safety](../LAB-SAFETY.md) · [Lab standard](../LAB-STANDARD.md) · [Progress](../PROGRESS-TRACKER.md)
 
@@ -104,19 +104,6 @@ Use the environment and privileges stated in the selected lab. Start with JUN-00
 | --- | --- |
 | JUN-069 | [JUN-069 — Linux Logging Fundamentals](05-Logs-Monitoring-and-Troubleshooting/69.%20JUN-069%20%E2%80%94%20Linux%20Logging%20Fundamentals.md) |
 | JUN-070 | [JUN-070 — journalctl: Investigating Linux Logs with the systemd Journal](05-Logs-Monitoring-and-Troubleshooting/70.%20JUN-070%20%E2%80%94%20journalctl.md) |
-| JUN-071 | [JUN-071 — Reading System Logs](05-Logs-Monitoring-and-Troubleshooting/71.%20JUN-071%20%E2%80%94%20Reading%20System%20Logs.md) |
-| JUN-072 | [JUN-072 — Basic CPU Monitoring](05-Logs-Monitoring-and-Troubleshooting/72.%20JUN-072%20%E2%80%94%20Basic%20CPU%20Monitoring.md) |
-| JUN-073 | [JUN-073 — Memory Monitoring](05-Logs-Monitoring-and-Troubleshooting/73.%20JUN-073%20%E2%80%94%20Memory%20Monitoring.md) |
-| JUN-074 | [JUN-074 — Disk Monitoring](05-Logs-Monitoring-and-Troubleshooting/74.%20JUN-074%20%E2%80%94%20Disk%20Monitoring.md) |
-| JUN-075 | [JUN-075 — Process Monitoring](05-Logs-Monitoring-and-Troubleshooting/75.%20JUN-075%20%E2%80%94%20Process%20Monitoring.md) |
-| JUN-076 | [JUN-076 — Basic Network Monitoring](05-Logs-Monitoring-and-Troubleshooting/76.%20JUN-076%20%E2%80%94%20Basic%20Network%20Monitoring.md) |
-| JUN-077 | [JUN-077 — Linux System Health Checks](05-Logs-Monitoring-and-Troubleshooting/77.%20JUN-077%20%E2%80%94%20Linux%20System%20Health%20Checks.md) |
-| JUN-078 | [JUN-078 — Basic Linux Troubleshooting](05-Logs-Monitoring-and-Troubleshooting/78.%20JUN-078%20%E2%80%94%20Basic%20Linux%20Troubleshooting.md) |
-| JUN-079 | [JUN-079 — Troubleshooting a Failed Service](05-Logs-Monitoring-and-Troubleshooting/79.%20JUN-079%20%E2%80%94%20Troubleshooting%20a%20Failed%20Service.md) |
-| JUN-080 | [JUN-080 — Troubleshooting Permission Problems](05-Logs-Monitoring-and-Troubleshooting/80.%20JUN-080%20%E2%80%94%20Troubleshooting%20Permission%20Problems.md) |
-| JUN-081 | [JUN-081 — Troubleshooting Disk Space Problems](05-Logs-Monitoring-and-Troubleshooting/81.%20JUN-081%20%E2%80%94%20Troubleshooting%20Disk%20Space%20Problems.md) |
-| JUN-082 | [JUN-082 — Troubleshooting SSH Problems](05-Logs-Monitoring-and-Troubleshooting/82.%20JUN-082%20%E2%80%94%20Troubleshooting%20SSH%20Problems.md) |
-| JUN-083 | [JUN-083 — Troubleshooting Network Connectivity](05-Logs-Monitoring-and-Troubleshooting/83.%20JUN-083%20%E2%80%94%20Troubleshooting%20Network%20Connectivity.md) |
 
 ## Continue when you can demonstrate the skill
 

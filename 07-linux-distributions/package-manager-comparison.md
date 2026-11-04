@@ -65,7 +65,7 @@ As an extension, compare the same capability on a second family, recording actua
 
 A correct translation records task, manager/implementation, scope, operands, side effects, expected statuses and actual result. A table entry is not proof that a tool or repository is installed or supported on the target.
 
-The portable exercise verifies a written task mapping only. Package availability, repository queries and transaction simulations remain pending Linux reproduction. Use [patching and maintenance](../06-system-administration/patching-and-maintenance.md) for an accepted change.
+The supplied-data exercise verifies a written task mapping only. Separate Linux runs reproduced APT simulations on Ubuntu 24.04/Debian 13 and DNF5 proposals on Fedora 44; see the [execution record](VALIDATION.md) for their actual outcomes and scope. Use [patching and maintenance](../06-system-administration/patching-and-maintenance.md) for an accepted change.
 
 ## Cleanup
 

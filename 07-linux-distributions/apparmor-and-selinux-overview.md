@@ -94,7 +94,7 @@ Expect the first two cases denied and the third allowed **in this model**. Expla
 
 For a real investigation, retain the exact failing operation, identity/domain/profile, object/path, time, ordinary access evidence, policy decision and tested correction. Verify intended enforcement remains enabled and unrelated access was not broadened. Inspect a new successful request and the absence of recurring relevant denials over an appropriate window.
 
-The exercise changed no mode, label, boolean, profile or host enforcement. It cannot establish a specific system's security posture. Linux policy observation and targeted change validation remain pending.
+The exercise changed no mode, label, boolean, profile or host enforcement. It cannot establish a specific system's security posture. Separate VM observations confirmed loaded AppArmor profiles on Ubuntu/Debian and SELinux enforcing on Fedora 44. No targeted policy change was validated; see the [execution record](VALIDATION.md).
 
 ## Cleanup
 

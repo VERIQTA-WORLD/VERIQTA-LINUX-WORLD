@@ -6,7 +6,7 @@ A service restart interrupts a process lifecycle and may affect connections, que
 
 This runbook assumes Linux with systemd. Host service changes require authorized administration. A unit can be active without being ready; Type, socket activation, application readiness and dependency behavior all matter.
 
-The lab uses a normal account's systemd **user manager** and one temporary runtime unit that runs sleep for at most 120 seconds per start. It never changes a host service, exposes a port or enables a unit at boot. It needs `/usr/bin/sleep`, Bash and a working user manager, and remains pending Linux execution validation.
+The lab uses a normal account's systemd **user manager** and one temporary runtime unit that runs sleep for at most 120 seconds per start. It never changes a host service, exposes a port or enables a unit at boot. It needs `/usr/bin/sleep`, Bash and a working user manager. The bounded exercise was reproduced on Ubuntu 24.04, Debian 13 and Fedora 44; see the [execution record](VALIDATION.md).
 
 ## Before you begin
 
@@ -112,9 +112,10 @@ systemctl --user stop "$safe_unit"
 rm -i -- "$safe_file"
 systemctl --user daemon-reload
 systemctl --user list-unit-files "$safe_unit" --no-pager
+printf 'unit listing status: %s\n' "$?"
 ```
 
-Expect no installed exercise unit. Leave a pre-existing runtime unit directory alone. Historical journal entries can remain. Do not disable or reset unrelated user/system services.
+Expect no installed exercise unit. On the tested systemd 255, 257 and 259 versions, the empty pattern result returns status 1; the printed listing status records that expected nonzero outcome. Confirm the runtime file is absent and the exercise is stopped rather than treating the listing status alone as a cleanup failure. Leave a pre-existing runtime unit directory alone. Historical journal entries can remain. Do not disable or reset unrelated user/system services.
 
 ## References
 

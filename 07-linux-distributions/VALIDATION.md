@@ -1,67 +1,51 @@
-# Validation and source-review record
+# Tested distribution observations
 
-Recorded November 4, 2026. All nine guide pages are written. Sources establish documented concepts and selected release facts; portable fixtures establish example behavior. Neither substitutes for observations on a running distribution/product variant.
+Linux execution review: November 4, 2026. The Ubuntu, Debian and conventional Fedora guides were exercised against three separately booted aarch64 cloud VMs. Identity came from each guest's actual `/etc/os-release`; managers, tools and policy were queried independently.
 
-## Completed checks
+## Named targets and observed state
 
-| Check | Method | Evidence and boundary |
-| --- | --- | --- |
-| Guide contract | `python3 tools/check_command_content.py` | Requires scope, practical differences, follow-along lab, verification/limits, cleanup and references in each guide |
-| Markdown/navigation | Same checker and `git diff --check` | Case-exact local paths, heading anchors, fences, table-code pipes and whitespace |
-| Bash and embedded Python | Same content checker | Syntax parsing without Linux host queries or changes |
-| Nine portable exercises | `python3 tools/check_distribution_labs.py` | Executes published fixture, selection, task-mapping and access-model examples; verifies expected observations and temporary-directory removal |
-| Identity hints | Same portable runner | Thirteen ID/ID_LIKE classifications, ordered relationship fallback, preserved variant/identity and explicitly unobserved tool/policy state |
-| Invalid identity input | Same portable runner | Eight missing/empty/duplicate/quote/spacing/size/encoding/executable-content cases rejected |
-| No shell execution | Same portable runner | Shell-like content in ignored metadata is not executed; recognized-field executable content is rejected without creating its marker |
+| Target | Package implementation | Network and resolver observations | Mandatory policy observation |
+| --- | --- | --- | --- |
+| Ubuntu 24.04.5 LTS | Actual APT/dpkg package origin/version queries and simulations | systemd-networkd managed the configured interface; authorized Netplan inspection succeeded; resolv.conf selected the resolved stub | AppArmor module and loaded profiles, including enforcing profiles, reported by aa-status |
+| Debian 13.7 trixie | Actual APT/dpkg package origin/version queries and simulations | This cloud image also used systemd-networkd and the resolved stub; that is an observation of this image, not a universal Debian default | AppArmor module and loaded profiles, including enforcing profiles, reported by aa-status |
+| Fedora Linux 44 Cloud Edition | DNF5 5.4.1.0, RPM queries and declined/no-op proposals | NetworkManager managed the cloud interface; this image also used the resolved stub | SELinux targeted policy was enforcing; mode was not disabled or changed |
 
-The portable run used macOS/Darwin, Python 3.9.6 and Bash 3.2.57. No Linux host was installed or probed, no package-manager transaction was run, no network/security setting changed and no commercial support/certification was established by these exercises.
+[Exact kernels, interpreter, systemd, util-linux, logrotate and OpenSSH versions](../04-command-reference/VALIDATION.md#named-linux-environments) identify the test boundaries. Lima 2.2.1/VZ provided the booted guests without host directory mounts. Package prerequisites were installed as VM preparation. These results do not describe a container or a desktop/Atomic image.
 
-The identity helper reads only simple ID, ID_LIKE, VERSION_ID and VARIANT_ID values from a bounded supplied file. It intentionally rejects unsupported forms and duplicates. It is not a complete implementation of every os-release field/escape rule, a detector of installed managers, or an automatic command-selection system. Real applications should use their platform's maintained parser and verify actual state.
+## What ran
 
-## Reproduce the checks
+- All nine supplied-data comparison exercises passed on each Linux target, including their expected output and temporary-directory cleanup.
+- The identity reader passed its thirteen classification cases, eight invalid-input cases and no-shell-execution checks on each target. It also read each guest's real identity without inferring a manager or enforcement state.
+- Package candidates/installed versions, applicable APT/DNF proposal behavior, actual network/resolver ownership, unit/log arrangement and available security-state interfaces were queried.
+- Fedora's installed-bash proposal reported no work. A separate absent `ed` install proposal returned 1 with an explicit user-abort result and left ed uninstalled. A nonzero declined transaction is different from a repository/permission error.
+- The shared host exercises reproduced systemd user failure/restart, GNU file restore, logrotate, tmpfs byte/inode exhaustion, read-only policy and alternate-fstab verification on all three products. Real trusted-key SSH sessions also passed; fixture access/trust state was restored afterward.
 
-From the repository root:
+The Debian/Fedora networking observations reinforce why the guides tell you to discover actual ownership. Sharing a resolver implementation does not make their network profiles, repositories, release policy or support obligations interchangeable.
+
+## Correction from real image permissions
+
+The Ubuntu cloud image denied unprivileged `netplan get` because its generated YAML was private. The [Ubuntu guide](ubuntu-administration-notes.md) now uses authorized `sudo netplan get`, explains that boundary and retains the original file permissions. A visibility denial does not establish that networking is broken.
+
+## Reproduce on your own named target
+
+Read the [shared runner prerequisites](../04-command-reference/VALIDATION.md#reproduce-on-your-disposable-vm), then run from the repository root in an ordinary account on a disposable Ubuntu, Debian or conventional Fedora VM:
 
 ```bash
-python3 tools/check_command_content.py
-python3 tools/check_distribution_labs.py
-python3 tools/check_cheat_sheets.py
-git diff --check
+private_results=$(mktemp -d)
+python3 tools/check_linux_exercises.py --confirm-disposable-vm \
+  --report "$private_results/results.json"
 ```
 
-The content checker does not execute commands. The distribution runner executes only the bounded supplied-data/concept exercises and reader tests using temporary files. It excludes Linux observation blocks, package queries, security-state commands and any installation/upgrade workflow.
+Keep the raw report private and record the exact product/release/variant, architecture, image source, versions, privileges, observation time and cleanup. Never replace an unavailable observation with a guessed family default. The runner does not install a new manager, enable enforcement, edit resolver profiles or perform a release upgrade.
 
-## Dated official-source review
+## Scope of comparison
 
-| Topic | Sources reviewed or linked | What the guides claim |
-| --- | --- | --- |
-| Identity | systemd os-release specification | Identity fields and family hints do not establish running managers or policy |
-| Ubuntu | Official coverage page, Server networking documentation and AppArmor guidance | Named 24.04 LTS study track; current coverage must be checked; Netplan/backend and profile state need observation |
-| Debian | Official trixie release information, release tracks and Debian Reference networking | Debian 13/trixie identified as stable at review; documented support scope/dates; no universal network-manager claim |
-| Fedora | Accepted DNF5 transition, official DNF5 package metadata and Atomic desktops page | DNF5 introduced with Fedora 41; historical introduction is not installation advice; variant/deployment model matters |
-| Enterprise RPM | RHEL 10 DNF/SELinux documentation, Rocky/AlmaLinux documentation and CentOS Stream page | Related concepts but distinct product identity, compatibility/coverage evidence and continuously delivered Stream positioning |
-| Other models | Alpine about/user handbook, NixOS manual, official pacman and Zypper manuals | musl/BusyBox/OpenRC distinctions, declarative generations and task-based package differences |
-| Mandatory policy | Ubuntu AppArmor, RHEL SELinux and kernel LSM documentation | Inspect actual process/object/policy; do not infer enforcement from installed tools or bypass it as a generic fix |
+The earlier official-source review supports the guides' documented concepts and dated release facts; it is not current commercial support verification. These VM runs add real observations for the three named cloud products, not certification for every related release or variant.
 
-Some Fedora lifecycle and Arch wiki fetches were blocked by their sites' automated-access protection; an openSUSE narrative documentation URL was unavailable. Official pacman/Zypper manuals and the accessible Fedora project sources were used for the corresponding concrete claims. The guides retain official lifecycle/maintenance links for the reader and avoid reproducing an unverified current Fedora support deadline. Selective source review is not an exhaustive external-link availability check.
+RHEL, Rocky/AlmaLinux, CentOS Stream, Fedora Atomic/bootc, openSUSE, Arch, Alpine and NixOS were not installed or runtime-validated in this pass. Related fixtures remain explicitly supplied-data exercises. No major upgrade, image deployment/rollback, network-manager transition, targeted mandatory-policy change or vendor entitlement test was performed.
 
-Exact point releases, newest-release rankings, prices and a universal supported-package list are deliberately not maintained here. Re-check official release notes, package scope, architecture, image variant, advisories and entitlement when making a real selection or change.
+The reader remains a bounded teaching parser for simple ID, ID_LIKE, VERSION_ID and VARIANT_ID values. It is not a full os-release parser or an automatic deployment-command selector. Passing its fixtures does not establish the truth of another image's identity or tool availability.
 
-## Linux reproduction still required
-
-| Target | Required observations | Status |
-| --- | --- | --- |
-| Conventional Ubuntu 24.04 LTS reference VM | Identity, package candidates/origins, Netplan backend, DNS ownership, SSH activation and actual AppArmor state | Pending |
-| Debian 13 reference VM | Identity/architecture, repositories/candidate, real networking/resolver owner, service/log and policy state | Pending |
-| Supported conventional Fedora release | Exact release, installed DNF implementation, repository behavior, network/policy state and support source/date | Pending |
-| Actual Fedora Atomic/image product | Identity variant, deployed image/tooling, host-versus-container boundaries and supported update procedure | Pending |
-| RHEL 9/10 and selected related product | Exact identity, DNF/repository access, architecture/hardware requirements, network/SELinux state and product-specific support evidence | Pending |
-| openSUSE/Arch/Alpine/NixOS | Reproduce only the claimed task/model on a named supported target and record actual tool/runtime differences | Pending |
-| Actual selection/upgrade | Workload/vendor compatibility, image verification, coverage, recovery and supported upgrade path | Pending |
-| GitHub rendering/independent reader | Visual table/code review and reproduction without unstated setup | Pending |
-
-No Linux VM was used during this authoring pass. Record reviewer/date, repository commit, exact product/release/variant, architecture, image source, kernel, tool versions, privileges and execution boundary for each pending run. Preserve actual outputs, interpretations, cleanup and source dates. Do not replace a missing observation with a guessed family default.
-
-The existing custom personal-study license remains unchanged. Public availability does not make this installment an open-source license grant.
+Content/syntax and local-link checks pass. External-link availability, GitHub visual rendering and independent reader reproduction are separate reviews. Use the [license](../LICENSE.md) for reuse terms; public availability does not remove its restrictions.
 
 [Collection home](README.md) · [Content standard](../CONTENT-STANDARD.md)

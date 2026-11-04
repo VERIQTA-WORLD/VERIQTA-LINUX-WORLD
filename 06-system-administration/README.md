@@ -57,6 +57,6 @@ Approval to perform a change is different from evidence that the change is safe.
 
 A valid configuration, an active unit, a successful backup job and a healthy service are different claims. Check the affected user operation, data correctness, dependencies, latency/errors, queues and resource headroom as appropriate. Define the observation window from the workload and previous failure mode. Keep temporary mitigations visible rather than silently treating them as permanent design.
 
-The exercises are deliberately smaller than real operations. File-based simulations do not reproduce a live database, a package maintainer script, distributed failover or infrastructure deletion. See [validation and reproduction requirements](VALIDATION.md) for what was actually tested and what remains pending.
+The exercises are deliberately smaller than real operations. File-based simulations do not reproduce a live database, a package maintainer script, distributed failover or infrastructure deletion. See [validation and reproduction requirements](VALIDATION.md) for named Linux execution results and their operational limits.
 
 [Command explanations](../04-command-reference/README.md) · [Command tables](../04-command-reference/cheat-sheets) · [Troubleshooting](../05-troubleshooting-and-recovery/README.md) · [LINUX-WORLD](../README.md)
