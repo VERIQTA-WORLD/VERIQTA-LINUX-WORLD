@@ -88,3 +88,7 @@ The portable method, offline SSH, reachability and verification exercises have e
 ## Follow-up: production administration, November 4, 2026
 
 Folder 6 now has ten runbooks with prerequisites, operating procedures, isolated practice, verification/rollback and cleanup. Eight portable exercises and the demonstration configuration validator have execution evidence; systemd, logrotate, visudo, package proposals and actual host/notification/retirement workflows still require Linux or platform review. See the [folder 6 validation record](../06-production-administration/VALIDATION.md). Folders 7–8 remain scaffolded.
+
+## Follow-up: Linux distributions, November 4, 2026
+
+Folder 7 now has nine guides covering distribution families, workload-based selection, Ubuntu/Debian/Fedora/enterprise-RPM administration, package tasks, mandatory policy and cross-family comparison. The guides separate identity hints from observed managers, product variants, enforcement and support evidence. Official-source review is dated; nine portable fixture/concept exercises and the limited identity reader have execution evidence. Real Linux product observations and upgrade/management compatibility remain pending in the [folder 7 validation record](../07-linux-distributions/VALIDATION.md). Folder 8 remains scaffolded.
