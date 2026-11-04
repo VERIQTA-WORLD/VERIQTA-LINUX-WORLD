@@ -84,3 +84,7 @@ The [custom license](../LICENSE.md) is an owner-requested drafting aid, not a le
 Folder 5 now contains the shared troubleshooting method, eight symptom guides and recovery-verification guidance. Each guide includes environment assumptions, evidence interpretation, a controlled exercise, recovery acceptance and cleanup. Two bounded Python helpers support loopback HTTP and process observation.
 
 The portable method, offline SSH, reachability and verification exercises have execution evidence. Linux-only systemd, DNS/NSS, tmpfs, /proc and boot checks remain pending. See the [folder 5 validation record](../05-troubleshooting-and-recovery/VALIDATION.md) before treating a scenario as tested. Folders 6–8 remain scaffolded. The remaining sequence is Linux reproduction and review, then production administration, distribution-specific notes and supporting references.
+
+## Follow-up: production administration, November 4, 2026
+
+Folder 6 now has ten runbooks with prerequisites, operating procedures, isolated practice, verification/rollback and cleanup. Eight portable exercises and the demonstration configuration validator have execution evidence; systemd, logrotate, visudo, package proposals and actual host/notification/retirement workflows still require Linux or platform review. See the [folder 6 validation record](../06-production-administration/VALIDATION.md). Folders 7–8 remain scaffolded.

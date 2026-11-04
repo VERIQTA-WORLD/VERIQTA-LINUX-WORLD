@@ -57,7 +57,7 @@ Storage changes, firewall activation, production service restarts and account de
 
 ## How this fits the repository
 
-Folder 4 answers “what does this command do, and how can I practise it?” Folder 5 answers “what evidence distinguishes these possible failures?” Folder 6 will define repeatable administration with prechecks and rollback. Folder 7 will explain distribution differences. Folder 8 will hold broader documentation and terminology.
+Folder 4 answers “what does this command do, and how can I practise it?” Folder 5 answers “what evidence distinguishes these possible failures?” Folder 6 defines repeatable administration with prechecks and rollback. Folder 7 will explain distribution differences. Folder 8 will hold broader documentation and terminology.
 
 Read the [assessment and architecture](../docs/folders-04-08-assessment.md) for the measured starting state, scope boundaries and the quality gates for future installments.
 
