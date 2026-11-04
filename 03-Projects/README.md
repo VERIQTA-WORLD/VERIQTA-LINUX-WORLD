@@ -1,5 +1,7 @@
 
 
+Use the [project workflow](project-workflow.md) before making changes. It explains readiness checks, acceptance evidence, recovery and cleanup across all levels.
+
 # Linux World Portfolio Projects
 
 Build practical Linux systems. Solve realistic infrastructure problems. Produce evidence that can be reviewed, tested, discussed, and presented in a technical portfolio.
@@ -29,9 +31,9 @@ These are production-style laboratory projects. They demonstrate engineering met
 
 | Level | Projects | Main focus | Recommended starting point |
 |---|---:|---|---|
-| [Junior](Junior/README.md) | 10 | Single-server administration, security, storage, services, Bash, monitoring, and troubleshooting | New Linux administrators and learners building their first technical portfolio |
-| [Mid-Level](Mid-Level/README.md) | 10 | Multi-service and multi-server platforms, automation, centralized operations, containers, CI/CD, and incident response | Learners who can administer one Linux server independently |
-| [Senior](Senior/README.md) | 10 | Architecture, high availability, identity, Kubernetes, observability, disaster recovery, performance, and reliability | Experienced administrators and infrastructure engineers ready to defend design trade-offs |
+| [Junior](01.%20Junior/README.md) | 10 | Single-server administration, security, storage, services, Bash, monitoring, and troubleshooting | New Linux administrators and learners building their first technical portfolio |
+| [Mid-Level](02.%20Mid-Level/README.md) | 10 | Multi-service and multi-server platforms, automation, centralized operations, containers, CI/CD, and incident response | Learners who can administer one Linux server independently |
+| [Senior](03.%20Senior/README.md) | 10 | Architecture, high availability, identity, Kubernetes, observability, disaster recovery, performance, and reliability | Experienced administrators and infrastructure engineers ready to defend design trade-offs |
 
 ## Required project lifecycle
 
@@ -141,16 +143,16 @@ Junior projects build confidence operating one Linux server. They provide the mo
 
 | # | Project | Portfolio outcome | Demonstrates |
 |---:|---|---|---|
-| 01 | [Linux User and Access Management System](Junior/01-Linux-User-and-Access-Management-System/README.md) | A secured identity and authorization environment with users, groups, permissions, sudo policy, access testing, and audit evidence | Linux administration, users and groups, permissions, sudo, Bash |
-| 02 | [Linux Server Security Hardening](Junior/02-Linux-Server-Security-Hardening/README.md) | A fresh server transformed into a documented hardened baseline | Linux security, SSH, firewall, system administration |
-| 03 | [Automated Linux Backup and Restore System](Junior/03-Automated-Linux-Backup-and-Restore-System/README.md) | Versioned backups, retention, scheduling, integrity checks, and a proven restore | Bash, cron or timers, storage, automation, disaster recovery |
-| 04 | [Linux Storage Management Environment](Junior/04-Linux-Storage-Management-Environment/README.md) | A managed storage stack with partitions or disposable devices, filesystems, mounts, permissions, monitoring, and recovery evidence | Storage administration, filesystems, LVM, troubleshooting |
-| 05 | [Production-Style Linux Web Server](Junior/05-Production-Style-Linux-Web-Server/README.md) | A secured NGINX or Apache server hosting a real site with controlled access, firewall policy, logs, and service operations | Linux administration, web servers, networking, security |
-| 06 | [Linux Server Monitoring Tool](Junior/06-Linux-Server-Monitoring-Tool/README.md) | A working monitoring tool with thresholds, alerts, logs, exit codes, and failure tests | Bash, monitoring, system administration, automation |
-| 07 | [Linux Log Analysis and Security Tool](Junior/07-Linux-Log-Analysis-and-Security-Tool/README.md) | A repeatable log-analysis tool that identifies suspicious authentication activity and recurring failures | Linux logging, Bash, security analysis, troubleshooting |
-| 08 | [Remote Linux Administration Toolkit](Junior/08-Remote-Linux-Administration-Toolkit/README.md) | A secure toolkit for administering multiple lab machines with SSH keys, controlled commands, and file transfers | SSH, networking, Bash, automation |
-| 09 | [Linux Service Reliability Project](Junior/09-Linux-Service-Reliability-Project/README.md) | Multiple systemd-managed services with startup ordering, restart behavior, logging, health checks, and recovery tests | systemd, service management, logging, troubleshooting |
-| 10 | [Linux System Administration CLI](Junior/10-Linux-System-Administration-CLI/README.md) | A reusable command-line tool for system information, health checks, storage, processes, networking, and diagnostics | Bash scripting, Linux administration, CLI development |
+| 01 | [Linux User and Access Management System](01.%20Junior/01.%20Portfolio%20Project%2001%3A%20Linux%20User%20%26%20Access%20Management%20System.md) | A secured identity and authorization environment with users, groups, permissions, sudo policy, access testing, and audit evidence | Linux administration, users and groups, permissions, sudo, Bash |
+| 02 | [Linux Server Security Hardening](01.%20Junior/02.%20Portfolio%20Project%2002%3A%20Linux%20Server%20Security%20Hardening.md) | A fresh server transformed into a documented hardened baseline | Linux security, SSH, firewall, system administration |
+| 03 | [Automated Linux Backup and Restore System](01.%20Junior/03.%20Portfolio%20Project%2003%3A%20Automated%20Linux%20Backup%20%26%20Restore%20System.md) | Versioned backups, retention, scheduling, integrity checks, and a proven restore | Bash, cron or timers, storage, automation, disaster recovery |
+| 04 | [Linux Storage Management Environment](01.%20Junior/04.%20Portfolio%20Project%2004%3A%20Linux%20Storage%20Management%20Environment.md) | A managed storage stack with partitions or disposable devices, filesystems, mounts, permissions, monitoring, and recovery evidence | Storage administration, filesystems, LVM, troubleshooting |
+| 05 | [Production-Style Linux Web Server](01.%20Junior/05.%20Portfolio%20Project%2005%3A%20Production-Style%20Linux%20Web%20Server.md) | A secured NGINX or Apache server hosting a real site with controlled access, firewall policy, logs, and service operations | Linux administration, web servers, networking, security |
+| 06 | [Linux Server Monitoring Tool](01.%20Junior/06.%20Portfolio%20Project%2006%3A%20Linux%20Server%20Monitoring%20Tool.md) | A working monitoring tool with thresholds, alerts, logs, exit codes, and failure tests | Bash, monitoring, system administration, automation |
+| 07 | [Linux Log Analysis and Security Tool](01.%20Junior/07.%20Portfolio%20Project%2007%3A%20Linux%20Log%20Analysis%20%26%20Security%20Tool.md) | A repeatable log-analysis tool that identifies suspicious authentication activity and recurring failures | Linux logging, Bash, security analysis, troubleshooting |
+| 08 | [Remote Linux Administration Toolkit](01.%20Junior/08.%20Portfolio%20Project%2008%3A%20Remote%20Linux%20Administration%20Toolkit.md) | A secure toolkit for administering multiple lab machines with SSH keys, controlled commands, and file transfers | SSH, networking, Bash, automation |
+| 09 | [Linux Service Reliability Project](01.%20Junior/09.%20Portfolio%20Project%2009%3A%20Linux%20Service%20Reliability%20Project.md) | Multiple systemd-managed services with startup ordering, restart behavior, logging, health checks, and recovery tests | systemd, service management, logging, troubleshooting |
+| 10 | [Linux System Administration CLI](01.%20Junior/10.%20Portfolio%20Project%2010%3A%20Linux%20System%20Administration%20CLI.md) | A reusable command-line tool for system information, health checks, storage, processes, networking, and diagnostics | Bash scripting, Linux administration, CLI development |
 
 ## Mid-Level Linux portfolio projects
 
@@ -158,16 +160,16 @@ Mid-Level projects combine multiple components and often require two or more Lin
 
 | # | Project | Portfolio outcome | Demonstrates |
 |---:|---|---|---|
-| 01 | [Production LEMP Web Application Platform](Mid-Level/01-Production-LEMP-Web-Application-Platform/README.md) | An integrated NGINX, PHP, MariaDB, TLS, firewall, logging, and automated deployment platform | Linux, NGINX, databases, networking, security, automation |
-| 02 | [Centralized Linux Logging Platform](Mid-Level/02-Centralized-Linux-Logging-Platform/README.md) | Multi-server log collection with filtering, organization, retention, search, and troubleshooting workflows | Logging, networking, observability, troubleshooting |
-| 03 | [Automated Linux Configuration Management Platform](Mid-Level/03-Automated-Linux-Configuration-Management-Platform/README.md) | An Ansible-managed Linux fleet with reproducible packages, identities, configurations, services, and security controls | Linux, Ansible, automation, configuration management |
-| 04 | [Highly Available Linux Web Platform](Mid-Level/04-Highly-Available-Linux-Web-Platform/README.md) | A redundant web platform with load balancing, health checks, failover, and tested service continuity | Networking, load balancing, high availability, troubleshooting |
-| 05 | [Linux Security Monitoring Platform](Mid-Level/05-Linux-Security-Monitoring-Platform/README.md) | Detection of suspicious authentication, integrity changes, unusual processes, and other security events | Linux security, logging, monitoring, incident detection |
-| 06 | [Linux Disaster Recovery Platform](Mid-Level/06-Linux-Disaster-Recovery-Platform/README.md) | Recovery of critical services from verified backups under measured RTO and RPO targets | Backup, recovery, automation, disaster recovery |
-| 07 | [Linux Network Services Infrastructure](Mid-Level/07-Linux-Network-Services-Infrastructure/README.md) | An isolated DNS and DHCP environment with controlled addressing, resolution, and failure diagnosis | Linux networking, DNS, DHCP, troubleshooting |
-| 08 | [Containerized Linux Application Platform](Mid-Level/08-Containerized-Linux-Application-Platform/README.md) | A Linux container host with application networking, persistent storage, resource controls, security, and operations | Linux, Docker, networking, storage, security |
-| 09 | [Linux CI-CD Deployment Server](Mid-Level/09-Linux-CI-CD-Deployment-Server/README.md) | A pipeline that retrieves code, tests it, builds an artifact, deploys it, verifies it, and supports rollback | Linux, Git, CI/CD, automation, deployment |
-| 10 | [Linux Incident Response Environment](Mid-Level/10-Linux-Incident-Response-Environment/README.md) | A controlled incident investigation with preserved evidence, root cause, remediation, recovery, and reporting | Troubleshooting, security, incident response, forensic thinking |
+| 01 | [Production LEMP Web Application Platform](02.%20Mid-Level/01.%20Portfolio%20Project%2001%3A%20Production%20LEMP%20Web%20Application%20Platform.md) | An integrated NGINX, PHP, MariaDB, TLS, firewall, logging, and automated deployment platform | Linux, NGINX, databases, networking, security, automation |
+| 02 | [Centralized Linux Logging Platform](02.%20Mid-Level/02.%20Portfolio%20Project%2002%3A%20Centralized%20Linux%20Logging%20Platform.md) | Multi-server log collection with filtering, organization, retention, search, and troubleshooting workflows | Logging, networking, observability, troubleshooting |
+| 03 | [Automated Linux Configuration Management Platform](02.%20Mid-Level/03.%20Portfolio%20Project%2003%3A%20Automated%20Linux%20Configuration%20Management%20Platform.md) | An Ansible-managed Linux fleet with reproducible packages, identities, configurations, services, and security controls | Linux, Ansible, automation, configuration management |
+| 04 | [Highly Available Linux Web Platform](02.%20Mid-Level/04.%20Portfolio%20Project%2004%3A%20Highly%20Available%20Linux%20Web%20Platform.md) | A redundant web platform with load balancing, health checks, failover, and tested service continuity | Networking, load balancing, high availability, troubleshooting |
+| 05 | [Linux Security Monitoring Platform](02.%20Mid-Level/05.%20Portfolio%20Project%2005%3A%20Linux%20Security%20Monitoring%20Platform.md) | Detection of suspicious authentication, integrity changes, unusual processes, and other security events | Linux security, logging, monitoring, incident detection |
+| 06 | [Linux Disaster Recovery Platform](02.%20Mid-Level/06.%20Portfolio%20Project%2006%3A%20Linux%20Disaster%20Recovery%20Platform.md) | Recovery of critical services from verified backups under measured RTO and RPO targets | Backup, recovery, automation, disaster recovery |
+| 07 | [Linux Network Services Infrastructure](02.%20Mid-Level/07.%20Portfolio%20Project%2007%3A%20Linux%20Network%20Services%20Infrastructure.md) | An isolated DNS and DHCP environment with controlled addressing, resolution, and failure diagnosis | Linux networking, DNS, DHCP, troubleshooting |
+| 08 | [Containerized Linux Application Platform](02.%20Mid-Level/08.%20Portfolio%20Project%2008%3A%20Containerized%20Linux%20Application%20Platform.md) | A Linux container host with application networking, persistent storage, resource controls, security, and operations | Linux, Docker, networking, storage, security |
+| 09 | [Linux CI-CD Deployment Server](02.%20Mid-Level/09.%20Portfolio%20Project%2009%3A%20Linux%20CI-CD%20Deployment%20Server.md) | A pipeline that retrieves code, tests it, builds an artifact, deploys it, verifies it, and supports rollback | Linux, Git, CI/CD, automation, deployment |
+| 10 | [Linux Incident Response Environment](02.%20Mid-Level/10.%20Portfolio%20Project%2010%3A%20Linux%20Incident%20Response%20Environment.md) | A controlled incident investigation with preserved evidence, root cause, remediation, recovery, and reporting | Troubleshooting, security, incident response, forensic thinking |
 
 ## Senior Linux portfolio projects
 
@@ -175,16 +177,16 @@ Senior projects test architecture, internal behavior, failure modes, scale, reli
 
 | # | Project | Portfolio outcome | Demonstrates |
 |---:|---|---|---|
-| 01 | [Enterprise High-Availability Linux Infrastructure](Senior/01-Enterprise-High-Availability-Linux-Infrastructure/README.md) | Redundant services, load balancing, health checks, failover, monitoring, and automated recovery | Infrastructure architecture, Linux, HA, networking, reliability |
-| 02 | [Production Kubernetes Infrastructure on Linux](Senior/02-Production-Kubernetes-Infrastructure-on-Linux/README.md) | A multi-node Kubernetes platform with networking, storage, ingress, RBAC, monitoring, and recovery | Linux, Kubernetes, containers, networking, security, reliability |
-| 03 | [Enterprise Linux Identity and Access Platform](Senior/03-Enterprise-Linux-Identity-and-Access-Platform/README.md) | Centralized authentication, authorization, SSH policy, sudo controls, lifecycle management, and auditing | Linux security, identity, authentication, authorization |
-| 04 | [Linux Observability Platform](Senior/04-Linux-Observability-Platform/README.md) | Integrated metrics, logs, dashboards, alerting, service availability, and tested operational response | Linux, Prometheus, Grafana, logging, observability |
-| 05 | [Enterprise Linux Disaster Recovery Architecture](Senior/05-Enterprise-Linux-Disaster-Recovery-Architecture/README.md) | A tested DR design with backup, replication, automation, runbooks, and validated RTO and RPO | Architecture, backup, disaster recovery, automation, reliability |
-| 06 | [Zero-Trust Linux Infrastructure](Senior/06-Zero-Trust-Linux-Infrastructure/README.md) | An identity-centered, segmented, least-privilege environment with continuous verification and auditing | Linux security, networking, identity, access control |
-| 07 | [Enterprise Linux Automation Platform](Senior/07-Enterprise-Linux-Automation-Platform/README.md) | Automated provisioning, configuration, hardening, monitoring, drift detection, and remediation at scale | Linux, Ansible, Bash or Python, configuration management |
-| 08 | [Linux Performance Engineering Platform](Senior/08-Linux-Performance-Engineering-Platform/README.md) | A measured baseline-to-improvement investigation across CPU, memory, storage, and networking | Linux performance, kernel and system analysis, troubleshooting |
-| 09 | [Production Linux Incident Simulation](Senior/09-Production-Linux-Incident-Simulation/README.md) | A timed multi-failure incident with service restoration, root cause, decision log, and post-incident review | Linux, incident response, SRE practices, reliability |
-| 10 | [Enterprise Linux Infrastructure Architecture](Senior/10-Enterprise-Linux-Infrastructure-Architecture/README.md) | An integrated production-style environment covering applications, data, networking, security, observability, automation, backup, and DR | Infrastructure engineering, architecture, automation, security, reliability |
+| 01 | [Enterprise High-Availability Linux Infrastructure](03.%20Senior/01.%20Portfolio%20Project%2001%3A%20Enterprise%20High-Availability%20Linux%20Infrastructure.md) | Redundant services, load balancing, health checks, failover, monitoring, and automated recovery | Infrastructure architecture, Linux, HA, networking, reliability |
+| 02 | [Production Kubernetes Infrastructure on Linux](03.%20Senior/02.%20Portfolio%20Project%2002%3A%20Production%20Kubernetes%20Infrastructure%20on%20Linux.md) | A multi-node Kubernetes platform with networking, storage, ingress, RBAC, monitoring, and recovery | Linux, Kubernetes, containers, networking, security, reliability |
+| 03 | [Enterprise Linux Identity and Access Platform](03.%20Senior/03.%20Portfolio%20Project%2003%3A%20Enterprise%20Linux%20Identity%20%26%20Access%20Platform.md) | Centralized authentication, authorization, SSH policy, sudo controls, lifecycle management, and auditing | Linux security, identity, authentication, authorization |
+| 04 | [Linux Observability Platform](03.%20Senior/04.%20Portfolio%20Project%2004%3A%20Linux%20Observability%20Platform.md) | Integrated metrics, logs, dashboards, alerting, service availability, and tested operational response | Linux, Prometheus, Grafana, logging, observability |
+| 05 | [Enterprise Linux Disaster Recovery Architecture](03.%20Senior/05.%20Portfolio%20Project%2005%3A%20Enterprise%20Linux%20Disaster%20Recovery%20Architecture.md) | A tested DR design with backup, replication, automation, runbooks, and validated RTO and RPO | Architecture, backup, disaster recovery, automation, reliability |
+| 06 | [Zero-Trust Linux Infrastructure](03.%20Senior/06.%20Portfolio%20Project%2006%3A%20Zero-Trust%20Linux%20Infrastructure.md) | An identity-centered, segmented, least-privilege environment with continuous verification and auditing | Linux security, networking, identity, access control |
+| 07 | [Enterprise Linux Automation Platform](03.%20Senior/07.%20Portfolio%20Project%2007%3A%20Enterprise%20Linux%20Automation%20Platform.md) | Automated provisioning, configuration, hardening, monitoring, drift detection, and remediation at scale | Linux, Ansible, Bash or Python, configuration management |
+| 08 | [Linux Performance Engineering Platform](03.%20Senior/08.%20Portfolio%20Project%2008%3A%20Linux%20Performance%20Engineering%20Platform.md) | A measured baseline-to-improvement investigation across CPU, memory, storage, and networking | Linux performance, kernel and system analysis, troubleshooting |
+| 09 | [Production Linux Incident Simulation](03.%20Senior/09.%20Portfolio%20Project%2009%3A%20Production%20Linux%20Incident%20Simulation.md) | A timed multi-failure incident with service restoration, root cause, decision log, and post-incident review | Linux, incident response, SRE practices, reliability |
+| 10 | [Enterprise Linux Infrastructure Architecture](03.%20Senior/10.%20Portfolio%20Capstone%20Project%2010%3A%20Enterprise%20Linux%20Infrastructure%20Architecture.md) | An integrated production-style environment covering applications, data, networking, security, observability, automation, backup, and DR | Infrastructure engineering, architecture, automation, security, reliability |
 
 ## Evidence requirements
 
@@ -259,16 +261,16 @@ The standard is simple:
 
 - [Start Here](../00-start-here/README.md)
 - [Beginner to Advanced](../01-Beginner-to-Advanced/README.md)
-- [Commands and Cheat Sheets](../02-Commands-and-Cheat-Sheets/README.md)
-- [Troubleshooting](../03-Troubleshooting/README.md)
-- [Interview Preparation](../05-Interview-Preparation/README.md)
-- [Labs](../07-Labs/README.md)
-- [Security](../08-Security/README.md)
-- [Internals](../09-Internals/README.md)
-- [DevOps and Cloud](../10-DevOps-and-Cloud/README.md)
-- [Production Operations](../11-Production-Operations/README.md)
-- [Distribution Notes](../13-Distribution-Notes/README.md)
-- [Resources](../14-Resources/README.md)
+- [Command reference](../04-command-reference/README.md)
+- [Troubleshooting](../05-troubleshooting-and-recovery/README.md)
+- [Learning progress and evidence](../00-start-here/learning-progress-checklist.md)
+- [Labs](../02-Labs/README.md)
+- [Security](../12-security-and-software-trust/README.md)
+- [Internals](../15-linux-internals-and-development/README.md)
+- [Automation and reproducibility](../10-automation-and-reproducibility/README.md)
+- [Production Operations](../06-system-administration/README.md)
+- [Distribution Notes](../07-linux-distributions/README.md)
+- [Resources](../08-resources-and-reference/README.md)
 
 ## Contribution standard
 

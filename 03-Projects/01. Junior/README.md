@@ -1,5 +1,7 @@
 # Junior Linux Portfolio Projects
 
+Use the [project workflow](../project-workflow.md) before making changes. It explains readiness checks, acceptance evidence, recovery and cleanup across all levels.
+
 Practical Linux projects built around real administration problems, guided implementation, controlled failures, troubleshooting, recovery, and portfolio evidence.
 
 The Junior Linux Projects collection turns foundational Linux knowledge into working systems. Each project places learners in a realistic scenario and guides them through planning, implementation, verification, failure diagnosis, repair, and documentation.
@@ -54,7 +56,7 @@ Create users and groups, design an access model, configure shared directories, a
 
 **What you will demonstrate:** Linux administration, users, groups, file permissions, ownership, sudo, Bash, access testing, and auditing.
 
-[Open Project 01](./01-user-access-management/)
+[Open Project 01](01.%20Portfolio%20Project%2001%3A%20Linux%20User%20%26%20Access%20Management%20System.md)
 
 ### 02. Linux Server Security Hardening
 
@@ -64,7 +66,7 @@ Review the server baseline, secure SSH access, configure firewall rules, remove 
 
 **What you will demonstrate:** Linux security, SSH, firewall management, service reduction, access control, validation, and recovery.
 
-[Open Project 02](./02-server-security-hardening/)
+[Open Project 02](02.%20Portfolio%20Project%2002%3A%20Linux%20Server%20Security%20Hardening.md)
 
 ### 03. Automated Linux Backup and Restore System
 
@@ -74,7 +76,7 @@ Identify important data, create versioned backups, verify archive integrity, sch
 
 **What you will demonstrate:** Bash, archives, cron or systemd timers, storage, logging, retention, restoration, and disaster recovery.
 
-[Open Project 03](./03-backup-restore-system/)
+[Open Project 03](03.%20Portfolio%20Project%2003%3A%20Automated%20Linux%20Backup%20%26%20Restore%20System.md)
 
 ### 04. Linux Storage Management Environment
 
@@ -84,7 +86,7 @@ Inspect block devices, prepare lab disks, create partitions and filesystems, con
 
 **What you will demonstrate:** Block devices, partitions, filesystems, mounting, `/etc/fstab`, LVM, permissions, capacity monitoring, and troubleshooting.
 
-[Open Project 04](./04-storage-management/)
+[Open Project 04](04.%20Portfolio%20Project%2004%3A%20Linux%20Storage%20Management%20Environment.md)
 
 ### 05. Production-Style Linux Web Server
 
@@ -94,7 +96,7 @@ Install and configure Nginx or Apache, publish site content, apply safe ownershi
 
 **What you will demonstrate:** Linux administration, Nginx or Apache, networking, firewall rules, permissions, systemd, log monitoring, and service recovery.
 
-[Open Project 05](./05-production-web-server/)
+[Open Project 05](05.%20Portfolio%20Project%2005%3A%20Production-Style%20Linux%20Web%20Server.md)
 
 ### 06. Linux Server Monitoring Tool
 
@@ -104,7 +106,7 @@ Collect CPU, memory, disk, load, uptime, and process information. Add configurab
 
 **What you will demonstrate:** Bash, system metrics, processes, thresholds, logging, alert logic, automation, and health verification.
 
-[Open Project 06](./06-server-monitoring-tool/)
+[Open Project 06](06.%20Portfolio%20Project%2006%3A%20Linux%20Server%20Monitoring%20Tool.md)
 
 ### 07. Linux Log Analysis and Security Tool
 
@@ -114,7 +116,7 @@ Analyze authentication failures, sudo activity, service errors, repeated events,
 
 **What you will demonstrate:** Linux logging, `journalctl`, text processing, Bash, authentication analysis, pattern detection, reporting, and troubleshooting.
 
-[Open Project 07](./07-log-analysis-security-tool/)
+[Open Project 07](07.%20Portfolio%20Project%2007%3A%20Linux%20Log%20Analysis%20%26%20Security%20Tool.md)
 
 ### 08. Remote Linux Administration Toolkit
 
@@ -124,7 +126,7 @@ Configure SSH keys, protect private key material, define client settings, execut
 
 **What you will demonstrate:** SSH, key-based authentication, networking, remote commands, secure file transfer, Bash automation, error handling, and multi-host administration.
 
-[Open Project 08](./08-remote-administration-toolkit/)
+[Open Project 08](08.%20Portfolio%20Project%2008%3A%20Remote%20Linux%20Administration%20Toolkit.md)
 
 ### 09. Linux Service Reliability Project
 
@@ -134,7 +136,7 @@ Create systemd service units, define dependencies, set restart policies, manage 
 
 **What you will demonstrate:** systemd, unit files, service dependencies, restart policies, journald, process management, failure analysis, and recovery testing.
 
-[Open Project 09](./09-service-reliability/)
+[Open Project 09](09.%20Portfolio%20Project%2009%3A%20Linux%20Service%20Reliability%20Project.md)
 
 ### 10. Linux System Administration CLI
 
@@ -144,7 +146,7 @@ Design commands for system information, CPU and memory health, disk usage, proce
 
 **What you will demonstrate:** Bash scripting, CLI design, functions, arguments, input validation, exit codes, Linux diagnostics, testing, and documentation.
 
-[Open Project 10](./10-system-administration-cli/)
+[Open Project 10](10.%20Portfolio%20Project%2010%3A%20Linux%20System%20Administration%20CLI.md)
 
 ## Recommended Learning Order
 
@@ -214,7 +216,7 @@ sudo command --option value
 
 Values inside angle brackets are placeholders.
 
-```bash
+```text
 ssh <username>@<server-ip>
 ```
 
@@ -311,8 +313,8 @@ The strongest portfolio projects do not hide mistakes. They show a disciplined i
 
 ## License
 
-Linux World is distributed under the terms defined in the repository [LICENSE](../../LICENSE) and [NOTICE](../../NOTICE.md). Review those terms before copying, modifying, or redistributing project content.
+Linux World is distributed under the terms defined in the repository [LICENSE](../../LICENSE.md) and [NOTICE](../../NOTICE.md). Review those terms before copying, modifying, or redistributing project content.
 
 ---
 
-Begin with [Project 01: Linux User and Access Management System](./01-user-access-management/).
+Begin with [Project 01: Linux User and Access Management System](01.%20Portfolio%20Project%2001%3A%20Linux%20User%20%26%20Access%20Management%20System.md).
