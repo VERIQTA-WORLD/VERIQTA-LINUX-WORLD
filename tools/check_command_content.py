@@ -13,6 +13,9 @@ COLLECTION = ROOT / '04-command-reference'
 RECOVERY = ROOT / '05-troubleshooting-and-recovery'
 ADMINISTRATION = ROOT / '06-system-administration'
 DISTRIBUTIONS = ROOT / '07-linux-distributions'
+LIBRARY = ROOT / '08-resources-and-reference'
+LIBRARY_REQUIRED = ('## Scope and environment', '## Reference', '## Follow along',
+                    '## Verify your result', '## Cleanup', '## Sources')
 DISTRIBUTION_REQUIRED = (
     '## Scope and environment',
     '## What changes in practice',
@@ -64,9 +67,9 @@ def exact_exists(path):
 
 def check():
     errors = []
-    navigation = sorted((ROOT / '00-start-here').glob('*.md')) + [ROOT / '08-resources-and-reference/README.md', ROOT / 'docs/repository-structure.md', ROOT / 'docs/structure-migration-validation.md']
+    navigation = sorted((ROOT / '00-start-here').glob('*.md')) + [ROOT / 'docs/repository-structure.md', ROOT / 'docs/structure-migration-validation.md']
     navigation += [p / 'README.md' for p in ROOT.iterdir() if p.is_dir() and p.name[:2] in {'09', '10', '11', '12', '13', '14', '15'}]
-    files = navigation + sorted(COLLECTION.rglob('*.md')) + sorted(RECOVERY.glob('*.md')) + sorted(ADMINISTRATION.glob('*.md')) + sorted(DISTRIBUTIONS.glob('*.md')) + [ROOT / 'README.md', ROOT / 'docs/folders-04-08-assessment.md', ROOT / 'CONTRIBUTING.md', ROOT / 'NOTICE.md', ROOT / 'LICENSE.md']
+    files = navigation + sorted(COLLECTION.rglob('*.md')) + sorted(RECOVERY.glob('*.md')) + sorted(ADMINISTRATION.glob('*.md')) + sorted(DISTRIBUTIONS.glob('*.md')) + sorted(LIBRARY.glob('*.md')) + [ROOT / 'README.md', ROOT / 'docs/folders-04-08-assessment.md', ROOT / 'CONTRIBUTING.md', ROOT / 'NOTICE.md', ROOT / 'LICENSE.md']
     references = [p for p in COLLECTION.glob('*/*.md') if p.name != 'README.md' and p.parent.name != 'cheat-sheets']
     recovery_guides = [p for p in RECOVERY.glob('*.md') if p.name not in {'README.md', 'VALIDATION.md'}]
     contracts = {p: REQUIRED for p in references}
@@ -75,6 +78,8 @@ def check():
     contracts.update({p: ADMIN_REQUIRED for p in admin_guides})
     distribution_guides = [p for p in DISTRIBUTIONS.glob('*.md') if p.name not in {'README.md', 'VALIDATION.md'}]
     contracts.update({p: DISTRIBUTION_REQUIRED for p in distribution_guides})
+    library_guides = [p for p in LIBRARY.glob('*.md') if p.name not in {'README.md', 'VALIDATION.md'}]
+    contracts.update({p: LIBRARY_REQUIRED for p in library_guides})
     blocks = 0
     links = 0
     for path in files:
