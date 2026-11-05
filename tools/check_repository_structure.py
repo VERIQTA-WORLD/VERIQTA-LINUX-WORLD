@@ -95,7 +95,7 @@ def main():
     require(not set(OLD) & names, 'Old top-level collection directory remains')
     numbered = {name for name in names if re.match(r'^\d\d-', name)}
     require(numbered == set(EXPECTED), 'Unexpected or duplicate numbered collection')
-    for folder in EXPECTED[9:]:
+    for folder in EXPECTED[10:]:
         require('**Status: planned.**' in (ROOT / folder / 'README.md').read_text(), f'Missing planned label: {folder}')
     sheets = sorted((ROOT / '04-command-reference/cheat-sheets').glob('*.md'))
     require(len(sheets) == 70, 'Expected one collection of 70 cheat sheets')
@@ -120,7 +120,7 @@ def main():
             count += 1
     if args.baseline:
         check_preservation(args.baseline)
-    print(f'PASS structure: 16 canonical collections, seven planned roadmaps, 70 indexed sheets and {count} navigation links')
+    print(f'PASS structure: 16 canonical collections, six scope roadmaps, 70 indexed sheets and {count} navigation links')
 
 
 if __name__ == '__main__':
