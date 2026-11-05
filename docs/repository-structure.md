@@ -14,8 +14,8 @@ This is the owner-approved structural plan, implemented November 4, 2026. Collec
 | 05 | [05-troubleshooting-and-recovery](../05-troubleshooting-and-recovery/README.md) | Evidence-led investigation and tested-scenario expansion |
 | 06 | [06-system-administration](../06-system-administration/README.md) | Individual hosts, fleet boundaries and explicit production requirements |
 | 07 | [07-linux-distributions](../07-linux-distributions/README.md) | Families, product variants and actual-state comparisons |
-| 08 | [08-resources-and-reference](../08-resources-and-reference/README.md) | Planned curated glossary, documentation map and reference library |
-| 09 | [09-desktop-and-workstation-linux](../09-desktop-and-workstation-linux/README.md) | Planned everyday/workstation Linux |
+| 08 | [08-resources-and-reference](../08-resources-and-reference/README.md) | Curated glossary, documentation map and reference library |
+| 09 | [09-desktop-and-workstation-linux](../09-desktop-and-workstation-linux/README.md) | Everyday desktop and workstation guides |
 | 10 | [10-automation-and-reproducibility](../10-automation-and-reproducibility/README.md) | Planned automation, provisioning and reproducibility |
 | 11 | [11-containers-and-isolation](../11-containers-and-isolation/README.md) | Planned isolation, OCI and container operations |
 | 12 | [12-security-and-software-trust](../12-security-and-software-trust/README.md) | Planned identity, policy, encryption and provenance |

@@ -14,6 +14,10 @@ RECOVERY = ROOT / '05-troubleshooting-and-recovery'
 ADMINISTRATION = ROOT / '06-system-administration'
 DISTRIBUTIONS = ROOT / '07-linux-distributions'
 LIBRARY = ROOT / '08-resources-and-reference'
+WORKSTATION = ROOT / '09-desktop-and-workstation-linux'
+WORKSTATION_REQUIRED = ('## Environment and prerequisites', '## Understand the components',
+                        '## Follow along', '## Verify and recover', '## Cleanup',
+                        '## Checkpoint', '## Sources')
 LIBRARY_REQUIRED = ('## Scope and environment', '## Reference', '## Follow along',
                     '## Verify your result', '## Cleanup', '## Sources')
 DISTRIBUTION_REQUIRED = (
@@ -68,8 +72,8 @@ def exact_exists(path):
 def check():
     errors = []
     navigation = sorted((ROOT / '00-start-here').glob('*.md')) + [ROOT / 'docs/repository-structure.md', ROOT / 'docs/structure-migration-validation.md']
-    navigation += [p / 'README.md' for p in ROOT.iterdir() if p.is_dir() and p.name[:2] in {'09', '10', '11', '12', '13', '14', '15'}]
-    files = navigation + sorted(COLLECTION.rglob('*.md')) + sorted(RECOVERY.glob('*.md')) + sorted(ADMINISTRATION.glob('*.md')) + sorted(DISTRIBUTIONS.glob('*.md')) + sorted(LIBRARY.glob('*.md')) + [ROOT / 'README.md', ROOT / 'docs/folders-04-08-assessment.md', ROOT / 'CONTRIBUTING.md', ROOT / 'NOTICE.md', ROOT / 'LICENSE.md']
+    navigation += [p / 'README.md' for p in ROOT.iterdir() if p.is_dir() and p.name[:2] in {'10', '11', '12', '13', '14', '15'}]
+    files = navigation + sorted(COLLECTION.rglob('*.md')) + sorted(RECOVERY.glob('*.md')) + sorted(ADMINISTRATION.glob('*.md')) + sorted(DISTRIBUTIONS.glob('*.md')) + sorted(LIBRARY.glob('*.md')) + sorted(WORKSTATION.glob('*.md')) + [ROOT / 'README.md', ROOT / 'docs/folders-04-08-assessment.md', ROOT / 'CONTRIBUTING.md', ROOT / 'NOTICE.md', ROOT / 'LICENSE.md']
     references = [p for p in COLLECTION.glob('*/*.md') if p.name != 'README.md' and p.parent.name != 'cheat-sheets']
     recovery_guides = [p for p in RECOVERY.glob('*.md') if p.name not in {'README.md', 'VALIDATION.md'}]
     contracts = {p: REQUIRED for p in references}
@@ -80,6 +84,8 @@ def check():
     contracts.update({p: DISTRIBUTION_REQUIRED for p in distribution_guides})
     library_guides = [p for p in LIBRARY.glob('*.md') if p.name not in {'README.md', 'VALIDATION.md'}]
     contracts.update({p: LIBRARY_REQUIRED for p in library_guides})
+    workstation_guides = [p for p in WORKSTATION.glob('*.md') if p.name not in {'README.md', 'VALIDATION.md'}]
+    contracts.update({p: WORKSTATION_REQUIRED for p in workstation_guides})
     blocks = 0
     links = 0
     for path in files:
