@@ -10,6 +10,8 @@
 
 </div>
 
+A VERIQTA resource. **[Official VERIQTA website](https://veriqta.com/)** — engineering education, technical publishing and professional assessment.
+
 LINUX-WORLD connects explanations, command references, practical exercises, projects and operational judgment across Linux foundations, desktop use, system administration and advanced engineering.
 
 ## Explore Linux World
